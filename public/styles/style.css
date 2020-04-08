@@ -26,22 +26,36 @@
     font-weight: normal;
     src: local('Codec Cold Trial News'), url('../assets/fonts/codec/Codec-Cold-News-trial.woff') format('woff');
 }
-
-
-
-
 img{
     max-width: 100%;
 }
+.home-page #headerId {
+    flex:0 0 auto;
+    background: url(../assets/images/bg1.png) no-repeat 0 0;
+    background-size: 100%;
+    min-height: 729px;
+}
+.bg-light-blue{
+    opacity: .9;
+    position: relative;
+    padding: 1rem 1rem;
+    z-index: 10;
+}
+
 .container-inner-top{
      width: 100%;
      height: 30px;
-     background-color:red ;
+     background-color:#7f979b;
+     opacity: .6;
+     position: relative;
+     z-index: 10;
  }
 .container-inner-top a:nth-child(1){
      margin:0 5px;
      color: #fff;
      background: transparent;
+     text-transform: none;
+     text-decoration: none;
      font-family: 'Codec Cold Trial News';
      font-size: 12px;
      font-weight: 700;
@@ -52,6 +66,7 @@ img{
     background: transparent;
     font-family:"Arial";
     font-size: 12px;
+    text-decoration: none;
 }
 .container-inner-top a:nth-child(3){
     margin:0 5px;
@@ -59,4 +74,41 @@ img{
     background: transparent;
     font-family:"Arial";
     font-size: 12px;
+    text-decoration: none;
+}
+
+.social a{
+    width: 17px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10%;
+    height: 17px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5), inset 0 0 15px rgba(0,0,0,0.5);
+}
+.social a:hover{
+    color:#fff ;
+    background:#000000;
+}
+.navbar-light .navbar-nav .nav-link, a{
+    color: #404f6e;
+    text-transform: uppercase;
+    font-family: 'Codec Cold Trial News';
+    text-decoration: underline;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+}
+.navbar-light .navbar-nav .nav-link:after{
+    content: '';
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    border: 10px solid;
+    border-color: #404f6e transparent transparent transparent;
+    margin-left: -10px;
 }
