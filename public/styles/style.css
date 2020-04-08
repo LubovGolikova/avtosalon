@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "VivaldiD CL";
+    src: url("../assets/fonts/VIVADCL_.TTF") format("ttf")
+}
+@font-face {
+    font-family: "Arial Narrow";
+    src: url("../assets/fonts/6428.ttf") format("ttf")
+}
+@font-face {
+    font-family: "Arial";
+    src: url("../assets/fonts/9041.ttf") format("ttf")
+}
+@font-face {
+    font-family: "Codec Cold Trial News";
+    src: url("../assets/fonts/Codec-Cold-News-trial.ttf") format("ttf")
+}
+@font-face {
+    font-family: 'Codec Cold News Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Codec Cold News Italic'), url('../assets/fonts/codec/Codec-Cold-News-Italic-trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Codec Cold Trial News';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Codec Cold Trial News'), url('../assets/fonts/codec/Codec-Cold-News-trial.woff') format('woff');
+}
+
+
+
+
+img{
+    max-width: 100%;
+}
+.container-inner-top{
+     width: 100%;
+     height: 30px;
+     background-color:red ;
+ }
+.container-inner-top a:nth-child(1){
+     margin:0 5px;
+     color: #fff;
+     background: transparent;
+     font-family: 'Codec Cold Trial News';
+     font-size: 12px;
+     font-weight: 700;
+ }
+.container-inner-top a:nth-child(2){
+    margin:0 5px;
+    color: #fff;
+    background: transparent;
+    font-family:"Arial";
+    font-size: 12px;
+}
+.container-inner-top a:nth-child(3){
+    margin:0 5px;
+    color: #fff;
+    background: transparent;
+    font-family:"Arial";
+    font-size: 12px;
+}
