@@ -31,9 +31,10 @@ img{
 }
 .home-page #headerId {
     flex:0 0 auto;
-    background: url(../assets/images/bg1.png) no-repeat 0 0;
+    background: url(../assets/images/bg-two.jpg) no-repeat 0 0;
     background-size: 100%;
-    min-height: 729px;
+    min-height: 1149px;
+
 }
 .bg-light-blue{
     opacity: .9;
@@ -90,7 +91,7 @@ img{
     color:#fff ;
     background:#000000;
 }
-.navbar-light .navbar-nav .nav-link, a{
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
     color: #404f6e;
     text-transform: uppercase;
     font-family: 'Codec Cold Trial News';
@@ -101,14 +102,59 @@ img{
     font-size: 16px;
     position: relative;
 }
-.navbar-light .navbar-nav .nav-link:after{
-    content: '';
+.navbar-light .navbar-nav .nav-link {
+    color: #404f6e;
+    text-transform: uppercase;
+    font-family: 'Codec Cold Trial News';
     text-decoration: none;
-    display: none;
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    border: 10px solid;
-    border-color: #404f6e transparent transparent transparent;
-    margin-left: -10px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color:red;
+}
+.box-0{
+    min-height: 129px;
+}
+.box-02{
+    min-height: 289px;
+}
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-default{
+    background: #bfbf3a;
+    text-transform: uppercase;
+    font-family: 'Codec Cold Trial News';
+    border-radius: 3px;
+    padding: .375rem 3.75rem;
+    margin-right: 100px;
+}
+.base-color-box-3{
+    width: 100%;
+    height: 70px;
+    background-color: #407a80;
+}
+.base-color-box-4{
+    width: 100%;
+    height: 364px;
+    background-color: #fff;
 }

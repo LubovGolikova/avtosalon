@@ -22,28 +22,74 @@
      </div>
   </div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
-    <div class="container">
-     @csrf
-     <div class="navbar-brand"> <a href="/">
-         <img src="{{asset('assets/images/logo-2.png')}}" alt=""/>
-         </a>
-     </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav mx-auto align-md-items-center">
-          <a class="nav-item nav-link active" href="#">Главная <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">О нас<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Цены<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Отзывы<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Услуги<span class="sr-only">(current)</span></a>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
+        <div class="container">
+         @csrf
+         <div class="navbar-brand"> <a href="/">
+             <img src="{{asset('assets/images/logo-2.png')}}" alt=""/>
+             </a>
+         </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto align-md-items-center">
+              <a class="nav-item nav-link active" href="/">Главная <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги<span class="sr-only">(current)</span></a>
+            </div>
+          </div>
+          </div>
+    </nav>
+    <div class="container box-0"></div>
+    <div class="container box-1 ">
+          <div class="row">
+              <div class="col-md-6">
+                 <h3>Уроки вождения</h3>
+                 <h1>У частного инструктура</h1>
+                 <p>Обучение проходит в комфортное для Вас время в любой части города! Уже через месяц Вы станете уверенным автомобилистом и перестанете бояться дорог!</p>
+                 <h4>225 грн/час первый урок!</h4>
+                 <a class="btn btn-default" href="/">Записаться</a>
+              </div>
+          </div>
       </div>
-      </div>
-</nav>
+      <div class="container box-02"></div>
+      <div class="container box-2">
+              <div class="row">
+                  <div class="col-md-4 offset-md-1">
+                      <img src="{{asset('assets/images/cars.png')}}" alt=""/>
+                  </div>
+                  <div class="col-md-7 content">
+                  <h3 class="text-center mb-5 mt-3 mt-md-0"> О нас </h3>
+                  Мечтаешь водить авто? Мы научим!
+                  В нашем коллективе инструктора - лидеры с огромным опытом работы.
+                  Наши главные приоритеты - это качественное, индивидуальное, а главное профессиональное обучение. Мы обучаем от самого простого уровня (новички) вождения автомобилем и заканчиваем приобретением совершенных навыков.
+
+                  Мы предоставляем учебные автомобили мировых производителей , как с механической коробкой передач, так и с автоматической.
+                  Все машины специально оборудованы, для комфортного и безопасного обучения.
+                  Если вы хотите обучаться на своем  автомобиле для нас это не проблема! Мы с удовольствием будем проводить занятия на вашем личном авто.
+                  </div>
+              </div>
+          </div>
 </header>
+<section class="box-3">
+    <div class="base-color-box-3">
+        <div class="container">
+            <div class="row">
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="box-4">
+    <div class="base-color-box-4">
+        <div class="container">
+
+        </div>
+    </div>
+</section>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
