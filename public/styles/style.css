@@ -225,7 +225,7 @@ img{
     width: 70%;
     height: 70px;
 }
-.base-color-box-7 p{
+.base-color-box-7  p{
     font-family: 'Codec Cold Heavy Trial';
     font-size: 24px;
     text-transform: uppercase;
@@ -233,6 +233,18 @@ img{
     text-align: center;
     position: relative;
     color: #fff;
+}
+.base-color-footer p{
+    color: #000304;
+    font-family: 'Codec Cold Trial News';
+    font-size: 14px;
+    text-align: left;
+}
+.base-color-footer h2{
+    color: #000304;
+    font-family: 'Codec Cold Heavy Trial';
+    font-size: 18px;
+    text-align: left;
 }
 #footerId .box-7-reviews-box-1{
     border-width: 2px;
@@ -265,6 +277,9 @@ img{
     color: #000000;
 }
 .base-color-footer{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
     margin: 45px 0 0 0;
     background-color:#fff;
     opacity: .6;

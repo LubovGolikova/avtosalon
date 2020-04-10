@@ -255,14 +255,39 @@
             <p>Читать отзывы</p>
         <div class="col col-md-12 align-items-center  text-center  justify-content-center mt-5">
         <h6>Дополнительные услуги</h6>
-        <div class="base-color-footer ">
-            <div class="row ">
-               <img src="{{asset('assets/images/footer-fig1.png')}}" alt=""/>
-               <img src="{{asset('assets/images/footer-fig2.png')}}" alt=""/>
-            </div>
-            <div class="row">
-            <img src="{{asset('assets/images/footer-fig3.png')}}" alt=""/>
-            <img src="{{asset('assets/images/footer-fig4.png')}}" alt=""/>
+        <div class="base-color-footer align-items-center  text-center  justify-content-center">
+             <div class="col-md-4">
+                <div class="row">
+                    <img src="{{asset('assets/images/footer-fig3.png')}}" alt=""/>
+                    <div class="col">
+                        <h2>Выбор авто</h2>
+                        <p>Помощь в выборе и покупке авто.
+                           Выезд вместе с покупателем на место продажи.</p>
+                    </div>
+                </div>
+                 <div class="row">
+                    <img src="{{asset('assets/images/footer-fig4.png')}}" alt=""/>
+                    <div class="col">
+                        <h2>Консультации</h2>
+                        <p>Консультирование в вопросах ремонта автомобиля.</p>
+                    </div>
+                 </div>
+             </div>
+            <div class="col-md-4">
+                <div class="row">
+                   <img src="{{asset('assets/images/footer-fig2.png')}}" alt=""/>
+                   <div class="col">
+                       <h2>Перегон авто</h2>
+                       <p>Помощь в выборе и покупке авто в странах ЕС. Перегон авто через границу.</p>
+                   </div>
+                </div>
+                <div class="row">
+                    <img src="{{asset('assets/images/footer-fig1.png')}}" alt=""/>
+                     <div class="col">
+                        <h2>Помощь по телефону</h2>
+                        <p>Круглосуточная поддержка по телефону в период обучения и после в любых вопросах.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row align-items-center  text-center  justify-content-center mt-3">
