@@ -32,6 +32,12 @@
     font-weight: normal;
     src: local('Codec Cold Heavy Trial'), url('../assets/fonts/codec/Codec-Cold-Heavy-trial.woff') format('woff');
 }
+@font-face {
+    font-family: 'Codec Cold Trial Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Codec Cold Trial Bold'), url('../assets/fonts/codec/Codec-Cold-Bold-trial.woff') format('woff');
+}
 img{
     max-width: 100%;
 }
@@ -88,19 +94,20 @@ img{
     font-size: 12px;
     text-decoration: none;
 }
-
-.social a{
+#footerId .social, .social{
+    line-height: 1;
+}
+#footerId .social a, .social a{
     width: 17px;
     display: inline-block;
     text-align: center;
     border-radius: 10%;
     height: 17px;
     box-sizing: border-box;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5), inset 0 0 15px rgba(0,0,0,0.5);
+
 }
-.social a:hover{
-    color:#fff ;
-    background:#000000;
+#footerId .social a:hover, .social a:hover{
+    color:#000000 ;
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
     color: #404f6e;
@@ -127,11 +134,10 @@ img{
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color:red;
 }
-.box-0{
-    min-height: 69px;
-}
-.box-02{
-    min-height: 389px;
+.box-1{
+    min-height: 860px;
+    display: flex;
+    align-items: center;
 }
 .box-1 h3 {
     font-size: 24px;
@@ -141,10 +147,8 @@ img{
     line-height: 1.2;
     text-align: left;
     text-shadow: 0px 10px 15px rgba(0,0,0,0.5);
-    position: absolute;
 }
 .box-1 h1 {
-    padding-top: 25px;
     font-size: 60px;
     font-family: 'Codec Cold Heavy Trial';
     color: rgb(251, 245, 245);
@@ -153,27 +157,22 @@ img{
     line-height: 1.2;
     text-align: left;
     text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-    position: absolute;
 }
 .box-1 p{
-    padding-top: 155px;
     font-size: 14px;
     font-family: 'Codec Cold Trial News';
     color: rgb(251, 245, 245);
     line-height: 1.429;
     text-align: left;
-    position: absolute;
 }
 
 .box-1 h4{
-    padding-top: 225px;
     font-size: 28px;
     font-family: 'Codec Cold Trial News';
     color: rgb(251, 248, 248);
     text-transform: uppercase;
     line-height: 1.2;
     text-align: left;
-    position: absolute;
 }
 .box-1 h4 span{
     font-size: 28px;
@@ -181,7 +180,7 @@ img{
     color: rgb(251, 245, 245);
     line-height: 1.2;
     text-align: left;
-    position: absolute;
+    position: relative;
 }
 .btn {
     display: inline-block;
@@ -209,37 +208,92 @@ img{
     padding: .375rem 3.75rem;
     margin-right: 100px;
 }
-
+.box-3-about-1 h2{
+    padding-top: 5px;
+    font-family: 'Codec Cold Heavy Trial';
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+.box-3-about-1 p{
+    font-family: 'Codec Cold Trial News';
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
 .base-color-box-3{
     width: 100%;
-    height: 120px;
     background-color: #407a80;
 }
 .base-color-box-4{
     width: 100%;
-    height: 284px;
     background-color: #fff;
+}
+.base-color-box-4 img{
+    display: block;
+    margin: 0 auto 20px auto;
 }
 .box-5-prices{
     flex:0 0 auto;
     background: url(../assets/images/wheel.jpg) no-repeat 0 0;
-    background-size: 100%;
-    min-height: 749px;
+    background-size: cover;
+    padding-bottom: 40px;
+}
+.box-5-prices h5{
+    padding-top: 5px;
+    font-family: 'Codec Cold Heavy Trial';
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+.box-5-prices p{
+    font-family: 'Codec Cold Heavy Trial';
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+    color: #fff;
 }
 .base-color-box-5{
     background-color: rgb(114, 136, 143);
     opacity: 0.678;
-    position: absolute;
-    width: 70%;
-    height: 120px;
+    margin: 20px -15px;
+}
+.base-color-box-5 p{
+    font-family: 'Codec Cold Trial News';
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+.base-color-box-5 p span {
+    font-size: 20px;
+    font-family: "Arial";
+    color: #fff;
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+}
+.box-6-sign-context h5:before{
+    font-size: 40px;
+    font-family: 'Codec Cold Trial Bold';
+    background: linear-gradient(to right, #53787D 0%, #5a8088 50%, #9BB1B4 100%);
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 700;
 }
 .box-6-sign{
-    background-size: 100% auto;
+    padding: 40px 0;
 }
 .box-6-sign form{
     background: rgba(255,255,255,0.5);
     border: 1px solid #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5), inset 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 22px 3px rgba(0,0,0,0.7), inset 0 0 15px rgba(0,0,0,0.5);
     border-radius: 15px;
     padding: 30px;
     margin: 30px 0;
@@ -261,7 +315,7 @@ img{
     top:50%;
     left: 0;
     right: 0;
-    border-top: 2px #ddd solid
+    border-top: 2px #ddd solid;
 }
 .box-6-sign h2 span {
     background: #fff;
@@ -269,21 +323,41 @@ img{
     display: inline-block;
     padding: 0 20px;
 }
+.box-6-sign input[type=text]{
+    background: #c1c7d0;
+}
+.box-6-sign .form-group{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box-6-mt{
+    margin-top: 45px !important;
+}
+
+.invert{
+    border: 1px #bfbf3a solid;
+    background: #fff;
+    margin: auto;
+    display: table;
+}
 
 .base-color-box-7{
     background-color:#407a80;
-    position: absolute;
-    width: 70%;
-    height: 70px;
-}
-.base-color-box-7  p{
+    padding: 10px 0;
     font-family: 'Codec Cold Heavy Trial';
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
-    position: relative;
     color: #fff;
+}
+.box-7-reviews-box-1-reviews p{
+    font-size: 14px;
+    font-family: 'Codec Cold Trial News';
+    color: rgb(64, 122, 128);
+    line-height: 1.2;
+    text-align: left;
 }
 .base-color-footer p{
     color: #000304;
@@ -382,4 +456,95 @@ img{
     font-size: 14px;
     color:#252525;
     text-align: left;
+}
+
+.navbar-light .navbar-toggler{
+    background: #407a80;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1600px){
+    .box-1{
+        min-height: 700px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1200px){
+    .box-1{
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .box-1{
+        min-height: 450px;
+    }
+    .box-1 h1{
+        font-size: 45px;
+    }
+    .box-1 h4{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .box-1{
+        min-height: 500px;
+    }
+    .home-page #headerId{
+        background-size: auto;
+        background-position: 50% 0;
+        background-image: url(../assets/images/bg-two-mobile.jpg);
+    }
+
+    .box-1 h1{
+        font-size: 35px;
+    }
+    .box-1 h3{
+        color: #fff;
+    }
+    header .navbar-nav{
+        background: #407a80;
+        padding: 24px;
+    }
+    header .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-nav .nav-link.active{
+        color: #fff;
+    }
+    .container-inner-top a{display: inline-block !important}
+    .base-color-box-5{
+        margin: 20px 0 40px 0;
+    }
+    .box-6-sign .form-group{
+        width: 100%;
+    }
 }

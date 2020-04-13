@@ -6,6 +6,7 @@
  <link href="{{asset('/assets/css/font-awesome.css')}}" rel="stylesheet">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <link rel="stylesheet" href="{{asset('styles/style.css')}}">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="home-page">
 <header id="headerId">
@@ -44,20 +45,18 @@
           </div>
     </nav>
 
-  <div class="container box-0"></div>
 
   <div class="container box-1 ">
-      <div class="col-md-6 text-left ">
+      <div class="col-md-7 col-lg-6 text-left ">
          <h3>Уроки вождения</h3>
          <h1>У частного инструктура</h1>
          <p>Обучение проходит в комфортное для Вас время в любой части города! Уже через месяц Вы станете уверенным автомобилистом и перестанете бояться дорог!</p>
-         <h4><span>225</span>грн/час первый урок!</h4>
+         <h4><span>225</span> грн/час первый урок!</h4>
 
          <a class="btn btn-default" href="/">Записаться</a>
       </div>
   </div>
 
-  <div class="container box-02"></div>
 
   <div class="container box-2">
       <div class="row">
@@ -88,7 +87,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 <section class="box-4-about-2">
@@ -119,32 +117,27 @@
                <h5>Цены</h5>
                <p>С учетом топлива</p>
          </div>
-        <div class="row align-items-center justify-content-center pt-5">
+        <div class="row align-items-center justify-content-center pt-5 text-center">
             <div class="col-md-4">
                 <img src="{{asset('assets/images/wheel-fig-1.jpg')}}" alt=""/>
+                <div class="price base-color-box-5">
+                    <p><span>250</span> грн/час</p>
+                    <p>Механика</p>
+                 </div>
             </div>
             <div class="col-md-4">
                  <img src="{{asset('assets/images/wheel-fig-2.jpg')}}" alt=""/>
+                 <div class="price base-color-box-5">
+                    <p><span>300</span> грн/час</p>
+                    <p>Автомат</p>
+                 </div>
             </div>
             <div class="col-md-4">
                  <img src="{{asset('assets/images/wheel-fig-3.jpg')}}" alt=""/>
-            </div>
-
-        </div>
-     <div class="base-color-box-5  col-md-12  align-items-center  text-center  justify-content-center mt-5 pt-3">
-             <div class="row">
-                <div class="col-md-4">
-                    <p>250 грн/час</p>
-                    <p>Механика</p>
-                </div>
-                <div class="col-md-4">
-                    <p>250 грн/час</p>
-                    <p>Механика</p>
-                </div>
-                <div class="col-md-4">
-                     <p>250 грн/час</p>
-                     <p>Механика</p>
-                </div>
+                 <div class="price base-color-box-5">
+                    <p><span>225</span> грн/час</p>
+                    <p>Ваше авто</p>
+                 </div>
             </div>
         </div>
     </div>
@@ -153,9 +146,9 @@
 <section class="box-6-sign">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="col align-items-center  text-center  justify-content-center">
-                    <h5>Записаться</h5>
+            <div class="col-md-8 offset-md-3">
+                <div class="box-6-sign-context col align-items-center  text-center  justify-content-center">
+                    <h5 class="text-center">Записаться </h5>
                      <p>На урок вождения</p>
                 </div>
                 <form method="POST" action="">
@@ -176,7 +169,7 @@
                     </div>
                     <div class="form-group row">
                           <div class="col">
-                            <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="" placeholder="Телефон" required autocomplete="phone">
+                            <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="" placeholder="Телефон" required autocomplete="phone">
                             @error('phone')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -188,7 +181,6 @@
                         <div class="col ">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="role" value="author" id="role" {{ old('role') ? 'checked' : '' }}>
-
                                 <label class="form-check-label" for="role">
                                    Я не робот
                                 </label>
@@ -197,12 +189,12 @@
                     </div>
                     <div class="form-group row mb-0">
                         <div class="col">
-                            <button type="submit" class="btn btn-default">
+                            <button type="submit" class="btn btn-default invert">
                                 Записаться
                             </button>
                         </div>
                     </div>
-                    <div class="form-group  mb-0 mt-3  text-center">
+                    <div class="w-75 m-auto  mb-0 mt-3  text-center box-6-mt">
                         <h2><span>Мы Вам обязательно перезвоним</span></h2>
                         <div class="logo-hands">
                             <img src="{{asset('assets/images/logo-hands.png')}}"
@@ -217,74 +209,74 @@
 
 <section class="box-7-reviews-1">
     <div class="container">
-        <div class="base-color-box-7  col-md-12  align-items-center  text-center  justify-content-center  pt-3 mb-5">
-            <p>Отзывы наших учеников</p>
+        <div class="base-color-box-7  text-center  mb-5">
+            Отзывы наших учеников
         </div>
+         <div class="row">
+            <div class="box-7-reviews-box-1 col-md-4">
+                <div class="row justify-content-md-around">
+                    <h5>25.03.2019/Ирина </h5>
+                    <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+                </div>
+                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
+            </div>
+            <div class="box-7-reviews-box-1 col-md-4">
+                <div class="row justify-content-md-around">
+                    <h5>25.03.2019/Ирина </h5>
+                    <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+                </div>
+                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
+            </div>
+            <div class="box-7-reviews-box-1 col-md-4">
+                <div class="row justify-content-md-around">
+                    <h5>25.03.2019/Ирина </h5>
+                    <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+                </div>
+                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
+            </div>
+         </div>
+         <div class="box-7-reviews-box-1-reviews row justify-content-md-end">
+             <p>Читать отзывы</p>
+         </div>
     </div>
 </section>
-<div class="container box-0"></div>
 
 <footer id="footerId">
     <div class="container">
-        <div class="row">
-                 <img src="{{asset('assets/images/arrow1.png')}}" alt=""/>
-                    <div class="box-7-reviews-box-1 col-md-3">
-                        <div class="row justify-content-md-around">
-                            <h5>25.03.2019/Ирина </h5>
-                            <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+        <div class="container-add-sevices col col-md-12 align-items-center  text-center  justify-content-center mt-5">
+            <h6>Дополнительные услуги</h6>
+            <div class="base-color-footer align-items-center  text-center  justify-content-center">
+                 <div class="col-md-4">
+                    <div class="row">
+                        <img src="{{asset('assets/images/footer-fig3.png')}}" alt=""/>
+                        <div class="col">
+                            <h2>Выбор авто</h2>
+                            <p>Помощь в выборе и покупке авто.
+                               Выезд вместе с покупателем на место продажи.</p>
                         </div>
-                        <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
                     </div>
-                    <div class="box-7-reviews-box-1 col-md-3">
-                        <div class="row justify-content-md-around">
-                            <h5>25.03.2019/Ирина </h5>
-                            <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+                     <div class="row">
+                        <img src="{{asset('assets/images/footer-fig4.png')}}" alt=""/>
+                        <div class="col">
+                            <h2>Консультации</h2>
+                            <p>Консультирование в вопросах ремонта автомобиля.</p>
                         </div>
-                        <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
-                    </div>
-                    <div class="box-7-reviews-box-1 col-md-3">
-                        <div class="row justify-content-md-around">
-                            <h5>25.03.2019/Ирина </h5>
-                            <img src="{{asset('assets/images/stars.png')}}" alt=""/>
-                        </div>
-                        <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
-                    </div>
-                 <img src="{{asset('assets/images/arrow2.png')}}" alt=""/>
-        </div>
-            <p>Читать отзывы</p>
-        <div class="col col-md-12 align-items-center  text-center  justify-content-center mt-5">
-        <h6>Дополнительные услуги</h6>
-        <div class="base-color-footer align-items-center  text-center  justify-content-center">
-             <div class="col-md-4">
-                <div class="row">
-                    <img src="{{asset('assets/images/footer-fig3.png')}}" alt=""/>
-                    <div class="col">
-                        <h2>Выбор авто</h2>
-                        <p>Помощь в выборе и покупке авто.
-                           Выезд вместе с покупателем на место продажи.</p>
-                    </div>
-                </div>
-                 <div class="row">
-                    <img src="{{asset('assets/images/footer-fig4.png')}}" alt=""/>
-                    <div class="col">
-                        <h2>Консультации</h2>
-                        <p>Консультирование в вопросах ремонта автомобиля.</p>
-                    </div>
+                     </div>
                  </div>
-             </div>
-            <div class="col-md-4">
-                <div class="row">
-                   <img src="{{asset('assets/images/footer-fig2.png')}}" alt=""/>
-                   <div class="col">
-                       <h2>Перегон авто</h2>
-                       <p>Помощь в выборе и покупке авто в странах ЕС. Перегон авто через границу.</p>
-                   </div>
-                </div>
-                <div class="row">
-                    <img src="{{asset('assets/images/footer-fig1.png')}}" alt=""/>
-                     <div class="col">
-                        <h2>Помощь по телефону</h2>
-                        <p>Круглосуточная поддержка по телефону в период обучения и после в любых вопросах.</p>
+                <div class="col-md-4">
+                    <div class="row">
+                       <img src="{{asset('assets/images/footer-fig2.png')}}" alt=""/>
+                       <div class="col">
+                           <h2>Перегон авто</h2>
+                           <p>Помощь в выборе и покупке авто в странах ЕС. Перегон авто через границу.</p>
+                       </div>
+                    </div>
+                    <div class="row">
+                        <img src="{{asset('assets/images/footer-fig1.png')}}" alt=""/>
+                         <div class="col">
+                            <h2>Помощь по телефону</h2>
+                            <p>Круглосуточная поддержка по телефону в период обучения и после в любых вопросах.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -294,9 +286,6 @@
             <a href="" class="d-block">+38 067 929 32 22</a>
             <a href="" class="d-block">+38 095 319 34 08</a>
         </div>
-
-
-    </div>
          <div class="col align-items-center  text-center  justify-content-center mt-5">
             <div class="social">
                 <a href="#"><i class="fa fa fa-facebook-square" aria-hidden="true"></i></a>
@@ -312,6 +301,7 @@
                 <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги<span class="sr-only">(current)</span></a>
             </div>
          </div>
+    </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
