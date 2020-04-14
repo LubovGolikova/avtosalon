@@ -101,7 +101,7 @@
 <section class="box-6-sign">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 offset-md-3">
+            <div class="col-md-8 offset-md-2">
                 <div class="box-6-sign-context col align-items-center  text-center  justify-content-center">
                     <h5 class="text">Записаться </h5>
                      <p>на урок вождения</p>
