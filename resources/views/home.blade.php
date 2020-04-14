@@ -1,50 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Avtosalon</title>
- <link href="{{asset('/assets/css/font-awesome.css')}}" rel="stylesheet">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link rel="stylesheet" href="{{asset('styles/style.css')}}">
- <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body class="home-page">
-<header id="headerId">
-  <div class="container-inner-top d-md-flex flex-row justify-content-center align-items-center">
 
-      <a href="" class="d-block">г.Запорожье</a>
-      <a href="" class="d-block">+38 067 929 32 22</a>
-      <a href="" class="d-block">+38 095 319 34 08</a>
-
-     <div class="social">
-        <a href="#"><i class="fa fa fa-facebook-square" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-     </div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
-        <div class="container">
-         @csrf
-         <div class="navbar-brand"> <a href="/">
-             <img src="{{asset('assets/images/logo-2.png')}}" alt=""/>
-             </a>
-         </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav mx-auto align-md-items-center">
-              <a class="nav-item nav-link active" href="/">Главная <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги<span class="sr-only">(current)</span></a>
-            </div>
-          </div>
-          </div>
-    </nav>
-
+@include('header')
 
   <div class="container box-1 ">
       <div class="col-md-7 col-lg-6 text-left ">
@@ -148,8 +103,8 @@
         <div class="row">
             <div class="col-md-8 offset-md-3">
                 <div class="box-6-sign-context col align-items-center  text-center  justify-content-center">
-                    <h5 class="text-center">Записаться </h5>
-                     <p>На урок вождения</p>
+                    <h5 class="text">Записаться </h5>
+                     <p>на урок вождения</p>
                 </div>
                 <form method="POST" action="">
                 @csrf
@@ -243,7 +198,7 @@
 
 <footer id="footerId">
     <div class="container">
-        <div class="container-add-sevices col col-md-12 align-items-center  text-center  justify-content-center mt-5">
+        <div class="container-add-services col col-md-12 align-items-center  text-center  justify-content-center mt-5">
             <h6>Дополнительные услуги</h6>
             <div class="base-color-footer align-items-center  text-center  justify-content-center">
                  <div class="col-md-4">
@@ -281,25 +236,30 @@
                 </div>
             </div>
         </div>
-        <div class="row align-items-center  text-center  justify-content-center mt-3">
-            <a href="" class="d-block">г.Запорожье</a>
-            <a href="" class="d-block">+38 067 929 32 22</a>
-            <a href="" class="d-block">+38 095 319 34 08</a>
-        </div>
-         <div class="col align-items-center  text-center  justify-content-center mt-5">
-            <div class="social">
-                <a href="#"><i class="fa fa fa-facebook-square" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-             </div>
-             <div class="row align-items-center  text-center  justify-content-center">
-                <a href="/"><img src="{{asset('assets/images/logo-2.png')}}" alt=""/></a>
-                <a class="nav-item nav-link active" href="/">Главная <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги<span class="sr-only">(current)</span></a>
+        <div class="content-city col mt-5">
+            <div class="row align-items-center  text-center  justify-content-center s">
+                <a href="" class="d-block">г.Запорожье</a>
+                <a href="" class="d-block">+38 067 929 32 22</a>
+                <a href="" class="d-block">+38 095 319 34 08</a>
             </div>
+            <div class="row align-items-center  text-center  justify-content-center mt-5">
+                <div class="social">
+                    <a href="#"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
+                </div>
+             </div>
+             <div class="footer-base row align-items-center  text-center  justify-content-center">
+                <a href="/"><img src="{{asset('assets/images/logo-2.png')}}" alt=""/></a>
+                <a class="nav-link active" href="/">Главная<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('us') ? 'active' : '' !!}" href="/">О нас<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/">Цены<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/">Отзывы<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/">Услуги<span class="sr-only">(current)</span></a>
+            </div>
+         </div>
+         <div class="footerId-rights row justify-content-md-end">
+                <p>&copy; Все права защищены</p>
          </div>
     </div>
 </footer>
