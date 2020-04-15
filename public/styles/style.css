@@ -41,12 +41,7 @@
 img{
     max-width: 100%;
 }
-.home-page #mini-headerId{
-    flex:0 0 auto;
-    /*background: url(../assets/images/bg-reviews-total.jpg) no-repeat 0 0;*/
-    background-size: 100%;
-    min-height: 2300px;
-}
+
 .home-page #headerId {
     flex:0 0 auto;
     background: url(../assets/images/bg-two.jpg) no-repeat 0 0;
@@ -55,17 +50,16 @@ img{
 }
 .home-page #footerId {
     flex:0 0 auto;
-    background: url(../assets/images/footer-bg.png) no-repeat 0 0;
+    background: url(../assets/images/bg-footer-home.jpg) no-repeat 0 0;
     background-size: 100%;
-    min-height: 849px;
+    min-height: 1149px;
 }
 
-.page{
-    background: url(../assets/images/bg-reviews-header.jpg) no-repeat 0 0, url(../assets/images/bg-reviews-footer.jpg) no-repeat 0 100%;
-    background-size: 100% auto;
+.reviews-page{
+    background: url(../assets/images/bg-reviews-total.jpg) no-repeat 100% 100%;
+    background-size: cover;
+    min-height: 3349px;
 }
-
-
 .bg-light-blue{
     opacity: .9;
     position: relative;
@@ -617,15 +611,27 @@ img{
 
 
 
-@media screen and (max-width: 1600px){
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px){
     .box-1{
         min-height: 700px;
     }
+    .reviews-page{
+        background: url(../assets/images/bg-reviews-header-2.jpg) no-repeat 0 0,
+        url(../assets/images/bg-footer-home.jpg) no-repeat 0 100%;
+        background-size: 100% auto;
+        min-height: 2249px;
+    }
 }
-
-
-
-
 
 @media screen and (max-width: 1200px){
     .box-1{

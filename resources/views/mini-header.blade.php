@@ -9,7 +9,7 @@
  <link rel="stylesheet" href="{{asset('assets/rate/jquery.raty.css')}}">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="page">
+<body class="reviews-page">
 <header id="mini-headerId">
   <div class="container-inner-top d-md-flex flex-row justify-content-center align-items-center">
 

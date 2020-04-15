@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::get('/reviews',"ReviewsController@index");
 Route::post('/reviews',"ReviewsController@store");
+Route::post('/',"SingUpController@store");
 Route::resource('/reviews/admin',"ReviewsAdminController");
 Auth::routes();
 

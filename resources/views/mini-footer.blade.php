@@ -34,7 +34,7 @@
 <script>
 $('.rating').raty({
 starOff:     '/assets/rate/images/star-off.png',
-starOn:      '/assets/rate/images/star-on.png',
+starOn:      '/assets/rate/images/star-on2.png',
 click: function(score, evt) {
     $('.input-rating').val(score)
   }

@@ -13,7 +13,7 @@ class SingUpController extends Controller
      */
     public function index()
     {
-        //
+        return view('/');
     }
 
     /**
@@ -36,7 +36,7 @@ class SingUpController extends Controller
     {
         $validator = Validator::make($request->all(),[
             'name'=>'required|min:2|max:150',
-            'phone'=>'required|regex:/(01)[0-9]{9}/'
+//            'phone'=>'required|regex:/(01)[0-9]{9}/'
         ]);
         if($validator->fails()){
             return redirect('/')->withErrors($validator)->withInput();

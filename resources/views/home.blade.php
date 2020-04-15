@@ -106,7 +106,7 @@
                     <h5 class="text">Записаться </h5>
                      <p>на урок вождения</p>
                 </div>
-                <form method="POST" action="">
+                <form method="POST" action="/">
                 @csrf
                     <div class="logo">
                         <img src="{{asset('assets/images/logo2.png')}}"
@@ -135,8 +135,8 @@
                     <div class="form-group row">
                         <div class="col ">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="role" value="author" id="role" {{ old('role') ? 'checked' : '' }}>
-                                <label class="form-check-label" for="role">
+                                <input class="form-check-input" type="checkbox" name="robot" value="0" id="robot" {{ old('robot') ? 'checked' : '' }}>
+                                <label class="form-check-label" for="robot">
                                    Я не робот
                                 </label>
                             </div>
@@ -160,44 +160,50 @@
             </div>
         </div>
     </div>
-</section>
+     @if(session('success'))
+                <div class="wrap">
+                    <div class="popup">
+                        Спассибо
+                        <i class="fa fa-close "></i>
+                    </div>
+                </div>
+            @endif
 
-<section class="box-7-reviews-1">
-    <div class="container">
-        <div class="base-color-box-7  text-center  mb-5">
-            Отзывы наших учеников
-        </div>
-         <div class="row">
-            <div class="box-7-reviews-box-1 col-md-4">
-                <div class="row justify-content-md-around">
-                    <h5>25.03.2019/Ирина </h5>
-                    <img src="{{asset('assets/images/stars.png')}}" alt=""/>
-                </div>
-                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
-            </div>
-            <div class="box-7-reviews-box-1 col-md-4">
-                <div class="row justify-content-md-around">
-                    <h5>25.03.2019/Ирина </h5>
-                    <img src="{{asset('assets/images/stars.png')}}" alt=""/>
-                </div>
-                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
-            </div>
-            <div class="box-7-reviews-box-1 col-md-4">
-                <div class="row justify-content-md-around">
-                    <h5>25.03.2019/Ирина </h5>
-                    <img src="{{asset('assets/images/stars.png')}}" alt=""/>
-                </div>
-                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
-            </div>
-         </div>
-         <div class="box-7-reviews-box-1-reviews row justify-content-md-end">
-             <p>Читать отзывы</p>
-         </div>
-    </div>
 </section>
 
 <footer id="footerId">
     <div class="container">
+        <div class="box-7-reviews-1">
+            <div class="base-color-box-7  text-center  mb-5">
+                Отзывы наших учеников
+            </div>
+             <div class="row  align-items-center  text-center  justify-content-center">
+                <div class="box-7-reviews-box-1 col-md-3">
+                    <div class="row justify-content-md-around">
+                        <h5>25.03.2019/Ирина </h5>
+                        <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+                    </div>
+                    <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
+                </div>
+                <div class="box-7-reviews-box-1 col-md-3">
+                    <div class="row justify-content-md-around">
+                        <h5>25.03.2019/Ирина </h5>
+                        <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+                    </div>
+                    <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
+                </div>
+                <div class="box-7-reviews-box-1 col-md-3">
+                    <div class="row justify-content-md-around">
+                        <h5>25.03.2019/Ирина </h5>
+                        <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+                    </div>
+                    <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
+                </div>
+             </div>
+             <div class="box-7-reviews-box-1-reviews row justify-content-md-end">
+                 <p>Читать отзывы</p>
+             </div>
+        </div>
         <div class="container-add-services col col-md-12 align-items-center  text-center  justify-content-center mt-5">
             <h6>Дополнительные услуги</h6>
             <div class="base-color-footer align-items-center  text-center  justify-content-center">
