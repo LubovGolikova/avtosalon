@@ -6,9 +6,10 @@
  <link href="{{asset('/assets/css/font-awesome.css')}}" rel="stylesheet">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <link rel="stylesheet" href="{{asset('styles/style.css')}}">
+ <link rel="stylesheet" href="{{asset('assets/rate/jquery.raty.css')}}">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="home-page">
+<body class="page">
 <header id="mini-headerId">
   <div class="container-inner-top d-md-flex flex-row justify-content-center align-items-center">
 
@@ -40,6 +41,9 @@
               <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены<span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы<span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги<span class="sr-only">(current)</span></a>
+                @auth
+                            <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
+                            @endauth
             </div>
           </div>
           </div>

@@ -35,12 +35,16 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto align-md-items-center">
-              <a class="nav-item nav-link active" href="/">Главная <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" href="/">Главная </a>
+              <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас</a>
+              <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены</a>
+              <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы</a>
+              <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги</a>
+              @auth
+              <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
+              @endauth
             </div>
+
           </div>
           </div>
     </nav>

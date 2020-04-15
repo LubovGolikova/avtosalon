@@ -3,28 +3,34 @@
     <div class="container">
         <h3>Отзывы</h3>
         <div class="container-reviews-send">
-            <form method="POST" action="">
+            <form method="POST" action="/reviews">
             @csrf
                 <div class="form-group row">
                     <label for="name" class="col-sm-1 col-form-label">Имя<span>*</span></label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control-r" id="name" name="name">
+                      <input type="text" class="form-control  form-control-r @error('name') is-invalid @enderror" id="name" name="name">
+                      @error('name')
+                          <div class="invalid-feedback">{{ $message }}</div>
+                      @enderror
                     </div>
                 </div>
                  <div class="form-group row">
                      <label for="review" class="col-sm-1 col-form-label">Отзыв<span>*</span></label>
                      <div class="col-sm-10">
-                       <input type="text" class="form-control-r" id="review" name="review">
+                       <textarea class="form-control form-control-r  @error('review') is-invalid @enderror" id="review" name="review" style="height: 105px"></textarea>
+                        @error('review')
+                                     <div class="invalid-feedback">{{ $message }}</div>
+                                             @enderror
                      </div>
                 </div>
                 <div class="form-group row">
                     <label for="rating" class="col-sm-1 col-form-label">Рейтинг<span>*</span></label>
                     <div class="col-sm-10">
-                         <a href="#"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></a>
+                        <div class="rating"></div>
+                       <input type="hidden" name="rating" class="input-rating"/>
+                        @error('rating')
+                                                            <div class="invalid-feedback">{{ $message }}</div>
+                                                                    @enderror
                     </div>
                 </div>
                 <div class="form-group row ">
@@ -37,7 +43,22 @@
 
             </form>
 
+
+
         </div>
 
+        @if(session('success'))
+        <div class="wrap">
+        <div class="popup">
+            Спассибо
+            <i class="fa fa-close "></i>
+        </div>
+        </div>
+        @endif
+
     </div>
+  @foreach($reviews as $review)
+                   <p>{{$review->name}}</p>
+                   @endforeach
 </div>
+@include('mini-footer')

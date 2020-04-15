@@ -43,7 +43,7 @@ img{
 }
 .home-page #mini-headerId{
     flex:0 0 auto;
-    background: url(../assets/images/bg-reviews-total.jpg) no-repeat 0 0;
+    /*background: url(../assets/images/bg-reviews-total.jpg) no-repeat 0 0;*/
     background-size: 100%;
     min-height: 2300px;
 }
@@ -59,6 +59,13 @@ img{
     background-size: 100%;
     min-height: 849px;
 }
+
+.page{
+    background: url(../assets/images/bg-reviews-header.jpg) no-repeat 0 0, url(../assets/images/bg-reviews-footer.jpg) no-repeat 0 100%;
+    background-size: 100% auto;
+}
+
+
 .bg-light-blue{
     opacity: .9;
     position: relative;
@@ -574,10 +581,34 @@ img{
     color: rgb(198, 42, 60);
 }
 
+.wrap{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+    background: #fff;
+    width: 250px;
+    height: 250px;
+    border: 1px #333 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
+}
 
-
-
+.popup .fa-close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
 
 
 

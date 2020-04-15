@@ -15,3 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/reviews',"ReviewsController@index");
+Route::post('/reviews',"ReviewsController@store");
+Route::resource('/reviews/admin',"ReviewsAdminController");
+Auth::routes();
+
