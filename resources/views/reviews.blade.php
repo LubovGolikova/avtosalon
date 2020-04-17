@@ -39,12 +39,7 @@
                             Оставить отзыв
                       </button>
                 </div>
-
-
             </form>
-
-
-
         </div>
 
         @if(session('success'))
@@ -56,9 +51,21 @@
             </div>
         @endif
 
+        @foreach($reviews as $review)
+            <div class="name-container-reviews-receive row justify-content-between">
+                <p>{{$review->name}}</p>
+                <div class="stars row">
+                   {{$review->getStarOnReviews($review->rating)}}
+                </div>
+            </div>
+            <div class="container-reviews-receive">
+                <p>{{$review->review}}</p>
+            </div>
+        @endforeach
+
+
+
     </div>
-  @foreach($reviews as $review)
-        <p>{{$review->name}}</p>
-  @endforeach
+
 </div>
 @include('mini-footer')

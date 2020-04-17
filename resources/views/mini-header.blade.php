@@ -24,26 +24,26 @@
      </div>
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
+  <nav class="mini-header-nav navbar navbar-expand-lg navbar-light bg-light-blue">
         <div class="container">
          @csrf
          <div class="navbar-brand"> <a href="/">
              <img src="{{asset('assets/images/logo-2.png')}}" alt=""/>
              </a>
          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button class="mini-header-nav navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=" mini-header-nav navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav mx-auto align-md-items-center">
-              <a class="nav-item nav-link active" href="/">Главная <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги<span class="sr-only">(current)</span></a>
-                @auth
-                            <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
-                            @endauth
+          <div class=" mini-header-nav collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="mini-header-nav navbar-nav mx-auto align-md-items-center">
+              <a class="mini-header-nav nav-item nav-link active" href="/">Главная <span class="sr-only">(current)</span></a>
+              <a class=" mini-header-nav nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас</a>
+              <a class=" mini-header-nav nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены</a>
+              <a class=" mini-header-nav nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы</a>
+              <a class=" mini-header-nav nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги</a>
+              @auth
+                   <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
+               @endauth
             </div>
           </div>
           </div>

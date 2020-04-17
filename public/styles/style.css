@@ -348,7 +348,10 @@ img{
     display: inline-block;
     padding: 0 20px;
 }
-.box-6-sign input[type=text]{
+.box-6-sign input[type="text"]{
+    background: #c1c7d0;
+}
+.box-6-sign input[type="tel"]{
     background: #c1c7d0;
 }
 .box-6-sign .form-group{
@@ -429,14 +432,18 @@ img{
 .base-color-footer{
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    padding: 23px;
     margin: 45px 0 0 0;
     background-color:#fff;
     opacity: .6;
     position: relative;
     z-index: 10;
-    height: 356px;
+    height: 426px;
 }
+.footer-block{
+    margin-top: 120px;
+}
+
 .content-city a:nth-child(1){
     margin:0 5px;
     color: #fff;
@@ -517,10 +524,13 @@ img{
 #footerId .nav-link:hover {
     color:red;
 }
+#mini-headerId .mini-header-nav{
+    color: #fff;
+}
 .container.reviews {
     background: #fff;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    min-height: 1600px;
+    min-height: 2600px;
     margin-top: 20px;
     padding: 60px;
 }
@@ -537,6 +547,17 @@ img{
 }
 .container-reviews-send a{
     color:#bfbf3a;
+}
+.container-reviews-receive{
+    background: #e8e8e8;
+    padding: 60px;
+
+}
+.name-container-reviews-receive{
+    margin-top: 60px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 10px;
 }
 .form-control-r{
     display: block;
@@ -574,7 +595,9 @@ img{
 .col-form-label span{
     color: rgb(198, 42, 60);
 }
-
+.fa-star{
+    color:#bfbf3a;
+}
 .wrap{
     position: fixed;
     top:0;
@@ -603,8 +626,6 @@ img{
     top: 10px;
     cursor: pointer;
 }
-
-
 
 
 

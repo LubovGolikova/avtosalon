@@ -114,7 +114,8 @@
                     </div>
                     <div class="form-group row">
                         <div class="col ">
-                           <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value=""  placeholder="Имя" required autocomplete="name" >
+                           <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
+                            name="name" value=""  placeholder="Имя" required autocomplete="name" >
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -124,7 +125,9 @@
                     </div>
                     <div class="form-group row">
                           <div class="col">
-                            <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="" placeholder="Телефон" required autocomplete="phone">
+                            <input id="phone" type="tel" pattern="[+]{1}[0-9]{11,14}" class="form-control @error('phone')
+                             is-invalid @enderror" name="phone" value="" placeholder="Телефон"  title="+ХХХХХХХХХХХ,
+                              например +380932568778" size="13" minlength="13" required autocomplete="phone">
                             @error('phone')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -161,13 +164,13 @@
         </div>
     </div>
      @if(session('success'))
-                <div class="wrap">
-                    <div class="popup">
-                        Спассибо
-                        <i class="fa fa-close "></i>
-                    </div>
-                </div>
-            @endif
+          <div class="wrap">
+               <div class="popup">
+                   Спассибо
+                    <i class="fa fa-close "></i>
+               </div>
+          </div>
+     @endif
 
 </section>
 
@@ -206,9 +209,10 @@
         </div>
         <div class="container-add-services col col-md-12 align-items-center  text-center  justify-content-center mt-5">
             <h6>Дополнительные услуги</h6>
-            <div class="base-color-footer align-items-center  text-center  justify-content-center">
-                 <div class="col-md-4">
-                    <div class="row">
+            <div class="base-color-footer ">
+                <div class="row align-items-center  text-center  justify-content-center px-5">
+                 <div class="col-md-6">
+                    <div class="row py-5">
                         <img src="{{asset('assets/images/footer-fig3.png')}}" alt=""/>
                         <div class="col">
                             <h2>Выбор авто</h2>
@@ -216,7 +220,7 @@
                                Выезд вместе с покупателем на место продажи.</p>
                         </div>
                     </div>
-                     <div class="row">
+                    <div class="row">
                         <img src="{{asset('assets/images/footer-fig4.png')}}" alt=""/>
                         <div class="col">
                             <h2>Консультации</h2>
@@ -224,8 +228,8 @@
                         </div>
                      </div>
                  </div>
-                <div class="col-md-4">
-                    <div class="row">
+                <div class="col-md-6">
+                    <div class="row py-5">
                        <img src="{{asset('assets/images/footer-fig2.png')}}" alt=""/>
                        <div class="col">
                            <h2>Перегон авто</h2>
@@ -242,13 +246,13 @@
                 </div>
             </div>
         </div>
-        <div class="content-city col mt-5">
-            <div class="row align-items-center  text-center  justify-content-center s">
+        <div class="content-city col mt-3">
+            <div class="row align-items-center  text-center  justify-content-center ">
                 <a href="" class="d-block">г.Запорожье</a>
                 <a href="" class="d-block">+38 067 929 32 22</a>
                 <a href="" class="d-block">+38 095 319 34 08</a>
             </div>
-            <div class="row align-items-center  text-center  justify-content-center mt-5">
+            <div class="footer-block row align-items-center  text-center  justify-content-center ">
                 <div class="social">
                     <a href="#"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
