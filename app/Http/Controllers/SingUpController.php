@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\SignUp;
 use Illuminate\Http\Request;
 use Validator;
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
 class SingUpController extends Controller
 {
     /**
@@ -41,11 +43,12 @@ class SingUpController extends Controller
         if($validator->fails()){
             return redirect('/')->withErrors($validator)->withInput();
         }
-        $review = new SignUp();
-        $review->name = $request->name;
-        $review->phone = $request->phone;
-        $review->robot = $request->robot;
-        $review->save();
+        $signup = new SignUp();
+        $signup->name = $request->name;
+        $signup->phone = $request->phone;
+        $signup->robot = $request->robot;
+        $signup->save();
+        Mail::to('lubovgolikova@gmail.com')->send(new OrderShipped($signup));
         return redirect('/')->with('success', 'Запись сохранена');
     }
 
