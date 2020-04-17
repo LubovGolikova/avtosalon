@@ -55,6 +55,30 @@ img{
     min-height: 1149px;
 }
 
+.container-pagination{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    flex:1;
+    position: absolute;
+    bottom: 0;
+    padding-left: 300px;
+}
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color:#407a80;
+    border-color: #407a80;
+}
 .reviews-page{
     background: url(../assets/images/bg-reviews-total.jpg) no-repeat 100% 100%;
     background-size: cover;
@@ -66,14 +90,16 @@ img{
     padding: 1rem 1rem;
     z-index: 10;
 }
-
+.content-city-header{
+    margin-left: 400px;
+}
 .container-inner-top{
      width: 100%;
      height: 40px;
      background-color:#7f979b;
      opacity: .6;
-     position: relative;
-     z-index: 10;
+     padding-top: 3px;
+     padding-right: 200px;
  }
 .container-inner-top a:nth-child(1){
      margin:0 5px;
@@ -101,10 +127,30 @@ img{
     font-size: 12px;
     text-decoration: none;
 }
-#footerId .social, .social{
+.fa-facebook-square{
+    color:#23589c;!important;
+
+}
+.fa-facebook-square:hover{
+     color:#fff;
+ }
+.fa-instagram{
+    color:red;
+}
+.fa-instagram:hover{
+    color:#fff;
+}
+.fa-telegram{
+    color:#00b5e9;
+}
+.fa-telegram:hover{
+    color:#fff;
+}
+#footerId .social,#headerId .social{
     line-height: 1;
 }
-#footerId .social a, .social a{
+
+#footerId .social a, #headerId .social a{
     width: 17px;
     display: inline-block;
     text-align: center;
@@ -112,8 +158,10 @@ img{
     height: 17px;
     box-sizing: border-box;
 
+
 }
-#footerId .social a:hover, .social a:hover{
+
+#footerId .social a:hover,#headerId .social a:hover{
     color:#000000 ;
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active,
@@ -533,6 +581,7 @@ img{
     min-height: 2600px;
     margin-top: 20px;
     padding: 60px;
+    position: relative;
 }
 .reviews h3{
     font-family: 'Codec Cold Heavy Trial';
@@ -550,13 +599,14 @@ img{
 }
 .container-reviews-receive{
     background: #e8e8e8;
-    padding: 60px;
+    padding: 30px;
+    margin-bottom: 60px;
 
 }
 .name-container-reviews-receive{
     margin-top: 60px;
-    padding-left: 23px;
-    padding-right: 23px;
+    padding-left: 43px;
+    padding-right: 63px;
     padding-bottom: 10px;
 }
 .form-control-r{

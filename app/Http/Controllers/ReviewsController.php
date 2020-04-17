@@ -14,7 +14,7 @@ class ReviewsController extends Controller
      */
     public function index()
     {
-        $reviews = Review::where('display', 1)->paginate(5);
+        $reviews = Review::where('display', 1)->paginate(8);
         return view('reviews', compact('reviews' ));
     }
     /**

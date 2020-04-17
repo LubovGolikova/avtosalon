@@ -61,9 +61,12 @@
             <div class="container-reviews-receive">
                 <p>{{$review->review}}</p>
             </div>
+
         @endforeach
 
-
+    <div class="container-pagination">
+        {{$reviews->links()}}
+    </div>
 
     </div>
 

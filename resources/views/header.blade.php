@@ -10,41 +10,42 @@
 </head>
 <body class="home-page">
 <header id="headerId">
-  <div class="container-inner-top d-md-flex flex-row justify-content-center align-items-center">
-
-      <a href="" class="d-block">г.Запорожье</a>
-      <a href="" class="d-block">+38 067 929 32 22</a>
-      <a href="" class="d-block">+38 095 319 34 08</a>
-
-     <div class="social">
-        <a href="#"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
-     </div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
-        <div class="container">
-         @csrf
-         <div class="navbar-brand"> <a href="/">
-             <img src="{{asset('assets/images/logo-2.png')}}" alt=""/>
-             </a>
-         </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav mx-auto align-md-items-center">
-              <a class="nav-item nav-link active" href="/">Главная </a>
-              <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас</a>
-              <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены</a>
-              <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы</a>
-              <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги</a>
-              @auth
-              <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
-              @endauth
+      <div class="container-inner-top">
+          <div class="container d-md-flex flex-row justify-content-around align-items-center mt-2">
+            <div class="content-city-header d-md-flex flex-row justify-content-center">
+              <a href="" class="d-block">г.Запорожье</a>
+              <a href="" class="d-block">+38 067 929 32 22</a>
+              <a href="" class="d-block">+38 095 319 34 08</a>
             </div>
+             <div class="social ">
+                <a href="#"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
+             </div>
+             </div>
+      </div>
 
-          </div>
-          </div>
-    </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
+            <div class="container">
+                 @csrf
+                 <div class="navbar-brand"> <a href="/">
+                     <img src="{{asset('assets/images/logo.png')}}" alt=""/>
+                     </a>
+                 </div>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav mx-auto align-md-items-center">
+                          <a class="nav-item nav-link active" href="/">Главная </a>
+                          <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас</a>
+                          <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены</a>
+                          <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы</a>
+                          <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги</a>
+                          @auth
+                          <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
+                          @endauth
+                        </div>
+                  </div>
+            </div>
+      </nav>
