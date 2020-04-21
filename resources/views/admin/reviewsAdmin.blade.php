@@ -13,15 +13,24 @@
                 <div class="container-reviews-admin-receive">
                     <p>{{$review->review}}</p>
                 </div>
-            </div>
-            <div class="btn-group mb-3" role="group" aria-label="Basic example">
-                <a href="/reviews/admin/{{$review->id}}/edit" class="btn btn-secondary">Редактировать</a>
-                     <form action="/reviews/admin/{{$review->id}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button  class="btn btn-secondary">Удалить</button>
-                     </form>
-            </div>
+
+             @if($review->children)
+                  <div class="name-container-reviews-answer">
+                     <p>{{\Illuminate\Support\Carbon::parse($review->created_at)->format('d.m.Y')}} / {{$review->children->name}}</p>
+                     <div class="container-reviews-answer">
+                        <p>{{$review->children->review}}</p>
+                     </div>
+                  </div>
+             @endif
+              </div>
+             <div class="btn-group mb-5" role="group" aria-label="Basic example">
+                 <a href="/reviews/admin/{{$review->id}}/edit" class="btn btn-secondary">Редактировать</a>
+                      <form action="/reviews/admin/{{$review->id}}" method="POST">
+                         @csrf
+                         @method('DELETE')
+                         <button  class="btn btn-secondary">Удалить</button>
+                      </form>
+             </div>
         @endforeach
       <div class="container-pagination">
            {{$reviews->links()}}
