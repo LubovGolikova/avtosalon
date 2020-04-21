@@ -603,14 +603,27 @@ img{
     margin-bottom: 60px;
 
 }
+.container-reviews-answer{
+    background: #fff;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 40px;
+    border: 1px solid #495057;
+}
 .container-reviews-admin-receive{
     background: #e8e8e8;
     padding: 30px;
+
 }
 .name-container-reviews-receive{
-    margin-top: 60px;
+    margin-top: 20px;
     padding-left: 43px;
     padding-right: 63px;
+    padding-bottom: 10px;
+}
+.name-container-reviews-answer{
+    margin-top: 60px;
+    margin-left: 20px;
+    padding-left: 43px;
     padding-bottom: 10px;
 }
 .form-control-r{
@@ -680,6 +693,43 @@ img{
     top: 10px;
     cursor: pointer;
 }
+
+.slick-next:before{
+    content:'>'
+}
+
+.slick-prev:before{
+    content:'<'
+}
+
+.slick-prev:before, .slick-next:before{
+    color: #407a80;
+    font-size: 48px;
+    font-family: 'Arial';
+
+}
+.slick-prev, .slick-next{
+    top: 42%
+}
+.slick-prev {
+    left: -35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

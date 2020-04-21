@@ -40,6 +40,8 @@ click: function(score, evt) {
   }
 });
 
+$('.rating.edit').raty('score', $('.rating.edit').attr('data-score'));
+
 $('.popup .fa-close').click(function(){
     $('.wrap').remove()
 });

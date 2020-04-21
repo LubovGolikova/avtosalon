@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Review;
+use Validator;
 class ReviewsAdminController extends Controller
 {
     /**
@@ -17,7 +18,7 @@ class ReviewsAdminController extends Controller
     }
     public function index()
     {
-        $reviews = Review::paginate(8);
+        $reviews = Review::where('parent_id', '=', null)->orderBy('created_at', 'DESC')->paginate(8);
         return view('admin.reviewsAdmin', compact('reviews' ));
     }
 
@@ -61,7 +62,8 @@ class ReviewsAdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $review = Review::find($id);
+        return view('admin.reviewsAdminEdit', compact('review' ));
     }
 
     /**
@@ -73,7 +75,21 @@ class ReviewsAdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(),[
+            'name'=>'required|min:2|max:150',
+            'review'=>'required|min:2|max:1000',
+            'rating'=>'required'
+        ]);
+        if($validator->fails()){
+            return back()->withErrors($validator)->withInput();
+        }
+        $review = Review::find($id);
+        $review->name = $request->name;
+        $review->review = $request->review;
+        $review->rating = $request->rating;
+        $review->display = $request->display ? 1 : 0;
+        $review->save();
+        return back()->with('success', 'Отзыв сохранен');
     }
 
     /**
@@ -84,6 +100,23 @@ class ReviewsAdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Review::find($id)->delete();
+        return back();
+    }
+
+    public function answer(Request $request, $id){
+        if($request->id){
+            $review = Review::find($request->id);
+        }
+        else{
+        $review = new Review();
+        }
+        $review->name = $request->name;
+        $review->review = $request->answer;
+        $review->rating = 0;
+        $review->display = 1;
+        $review->parent_id = $id;
+        $review->save();
+        return back()->with('success', 'Ответ сохранен');
     }
 }

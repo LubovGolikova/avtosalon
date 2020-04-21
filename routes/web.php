@@ -11,12 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', "HomeController@index");
 Route::get('/reviews',"ReviewsController@index");
 Route::post('/reviews',"ReviewsController@store");
 Route::post('/',"SingUpController@store");
 Route::resource('/reviews/admin',"ReviewsAdminController");
+Route::put('/reviews/admin/{id}/answer',"ReviewsAdminController@answer");
 Auth::routes();
 

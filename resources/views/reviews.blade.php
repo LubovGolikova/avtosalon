@@ -45,7 +45,7 @@
         @if(session('success'))
             <div class="wrap">
                 <div class="popup">
-                    Спассибо
+                    Спасибо
                     <i class="fa fa-close "></i>
                 </div>
             </div>
@@ -53,7 +53,7 @@
 
         @foreach($reviews as $review)
             <div class="name-container-reviews-receive row justify-content-between">
-                <p>{{$review->name}}</p>
+                <p>{{\Illuminate\Support\Carbon::parse($review->created_at)->format('d.m.Y')}} / {{$review->name}}</p>
                 <div class="stars row">
                    {{$review->getStarOnReviews($review->rating)}}
                 </div>
@@ -61,6 +61,15 @@
             <div class="container-reviews-receive">
                 <p>{{$review->review}}</p>
             </div>
+
+            @if($review->children)
+                  <div class="name-container-reviews-answer">
+                     <p>{{\Illuminate\Support\Carbon::parse($review->created_at)->format('d.m.Y')}} / {{$review->children->name}}</p>
+                     <div class="container-reviews-answer">
+                        <p>{{$review->children->review}}</p>
+                     </div>
+                  </div>
+            @endif
         @endforeach
 
         <div class="container-pagination">

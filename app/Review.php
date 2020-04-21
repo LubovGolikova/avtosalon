@@ -11,4 +11,8 @@ class Review extends Model
             echo "<i class=\"fa fa-star\" aria-hidden=\"true\"></i>";
         }
     }
+
+    public function children(){
+        return $this->hasOne('\App\Review', 'parent_id');
+    }
 }

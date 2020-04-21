@@ -184,31 +184,21 @@ s
             <div class="base-color-box-7  text-center  mb-5">
                 Отзывы наших учеников
             </div>
-             <div class="row  align-items-center  text-center  justify-content-center">
-                <div class="box-7-reviews-box-1 col-md-3">
-                    <div class="row justify-content-md-around">
-                        <h5>25.03.2019/Ирина </h5>
-                        <img src="{{asset('assets/images/stars.png')}}" alt=""/>
+             <div class="row  align-items-center  text-center  justify-content-center slider">
+                @foreach($reviews as $review)
+                    <div class="box-7-reviews-box-1 col-md-3">
+                        <div class="row justify-content-md-between m-0 p-1">
+                            <h5>{{\Illuminate\Support\Carbon::parse($review->created_at)->format('d.m.Y')}} / {{$review->name}}</h5>
+                            <div class="stars row m-0">
+                               {{$review->getStarOnReviews($review->rating)}}
+                            </div>
+                               <p>{{$review->review}}</p>
+                        </div>
                     </div>
-                    <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
-                </div>
-                <div class="box-7-reviews-box-1 col-md-3">
-                    <div class="row justify-content-md-around">
-                        <h5>25.03.2019/Ирина </h5>
-                        <img src="{{asset('assets/images/stars.png')}}" alt=""/>
-                    </div>
-                    <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
-                </div>
-                <div class="box-7-reviews-box-1 col-md-3">
-                    <div class="row justify-content-md-around">
-                        <h5>25.03.2019/Ирина </h5>
-                        <img src="{{asset('assets/images/stars.png')}}" alt=""/>
-                    </div>
-                    <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации...</p>
-                </div>
+               @endforeach
              </div>
              <div class="box-7-reviews-box-1-reviews row justify-content-md-end">
-                 <p>Читать отзывы</p>
+                 <a href="/reviews" ><p>Читать отзывы</p></a>
              </div>
         </div>
         <div class="container-add-services col col-md-12 align-items-center  text-center  justify-content-center mt-5">
@@ -280,6 +270,7 @@ s
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="{{asset('assets//slick/slick.min.js')}}"></script>
 <script>
 
 $('.popup .fa-close').click(function(){
@@ -292,6 +283,11 @@ if(e.target.classList.contains('wrap'))
     $('.wrap').remove()
 });
 
+$('.slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
 
 </script>
 </body>
