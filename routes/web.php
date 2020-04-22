@@ -16,6 +16,7 @@ Route::get('/reviews',"ReviewsController@index");
 Route::post('/reviews',"ReviewsController@store");
 Route::post('/',"SingUpController@store");
 Route::resource('/reviews/admin',"ReviewsAdminController");
+Route::resource('/signup/admin',"SignupAdminController");
 Route::put('/reviews/admin/{id}/answer',"ReviewsAdminController@answer");
 Auth::routes();
 

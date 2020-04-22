@@ -1,4 +1,4 @@
-
+<footer id="mini-footerId">
     <div class="container">
         <div class="content-city col mt-5">
             <div class="row align-items-center  text-center  justify-content-center s">
@@ -6,7 +6,7 @@
                 <a href="" class="d-block">+38 067 929 32 22</a>
                 <a href="" class="d-block">+38 095 319 34 08</a>
             </div>
-            <div class="row align-items-center  text-center  justify-content-center mt-5">
+            <div class="footer-block row align-items-center  text-center  justify-content-center ">
                 <div class="social">
                     <a href="#"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
@@ -14,7 +14,7 @@
                 </div>
              </div>
              <div class="footer-base row align-items-center  text-center  justify-content-center">
-                <a href="/"><img src="{{asset('assets/images/logo-2.png')}}" alt=""/></a>
+                <a href="/"><img src="{{asset('assets/images/logo.png')}}" alt=""/></a>
                 <a class="nav-link active" href="/">Главная<span class="sr-only">(current)</span></a>
                 <a class="nav-link {!!Request::is('us') ? 'active' : '' !!}" href="/">О нас<span class="sr-only">(current)</span></a>
                 <a class="nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/">Цены<span class="sr-only">(current)</span></a>

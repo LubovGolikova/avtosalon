@@ -19,7 +19,7 @@
           <div class="col-md-6 ">
               <img src="{{asset('assets/images/cars.png')}}" alt=""/>
           </div>
-          <div class="col-md-6 content">
+          <div class="col-md-6 content mb-5">
           <h3 class="text-left mb-5 mt-3 mt-md-0"> О нас </h3>
           <span>Мечтаешь водить авто? Мы научим!</span>
           <p>В нашем коллективе автоинструктора - лидеры с огромным опытом работы. <br>
@@ -289,12 +289,6 @@ $('.slider').slick({
   slidesToShow: 3,
   slidesToScroll: 3
 });
-//$('.scrollLink, .nav-link, .navbar-brand,.container-add-services').click(function() {
-//    var sectionTo = $(this).attr('href');
-//    $('html, body').animate({
-//      scrollTop: $(sectionTo).offset().top
-//    }, 1500);
-//});
 </script>
 </body>
 </html>

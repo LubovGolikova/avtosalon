@@ -43,6 +43,7 @@
               <a class=" mini-header-nav nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги</a>
               @auth
                    <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
+                   <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/signup/admin"> Управление Заявками</a>
                @endauth
             </div>
           </div>

@@ -41,18 +41,24 @@
 img{
     max-width: 100%;
 }
-
 .home-page #headerId {
     flex:0 0 auto;
-    background: url(../assets/images/bg-two.jpg) no-repeat 0 0;
+    background: url(../assets/images/bg/bg-two.jpg) no-repeat 0 0;
     background-size: 100%;
     min-height: 1149px;
 }
 .home-page #footerId {
     flex:0 0 auto;
-    background: url(../assets/images/bg-footer-home.jpg) no-repeat 0 0;
+    background: url(../assets/images/bg/footer.jpg) no-repeat 0 0;
     background-size: 100%;
-    min-height: 1149px;
+    min-height: 1060px;
+}
+
+.reviews-page #mini-headerId{
+    background: url(../assets/images/bg/mini-header.png) no-repeat 0 0,
+    url(../assets/images/bg/footer.jpg) no-repeat 0 100%;
+    background-size: 100% auto;
+    min-height: 2249px;
 }
 
 .container-pagination{
@@ -79,11 +85,7 @@ img{
     background-color:#407a80;
     border-color: #407a80;
 }
-.reviews-page{
-    background: url(../assets/images/bg-reviews-total.jpg) no-repeat 100% 100%;
-    background-size: cover;
-    min-height: 3349px;
-}
+
 .bg-light-blue{
     opacity: .9;
     position: relative;
@@ -146,11 +148,11 @@ img{
 .fa-telegram:hover{
     color:#fff;
 }
-#footerId .social,#headerId .social{
+#footerId .social,#headerId .social, #mini-headerId .social, #mini-footerId .social{
     line-height: 1;
 }
 
-#footerId .social a, #headerId .social a{
+#footerId .social a, #headerId .social a, #mini-headerId .social a, #mini-footerId .social a{
     width: 17px;
     display: inline-block;
     text-align: center;
@@ -161,7 +163,7 @@ img{
 
 }
 
-#footerId .social a:hover,#headerId .social a:hover{
+#footerId .social a:hover, #headerId .social a:hover, #mini-headerId .social a:hover, #mini-footerId .social a:hover{
     color:#000000 ;
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active,
@@ -191,7 +193,7 @@ img{
     color:red;
 }
 .box-1{
-    min-height: 860px;
+    min-height: 660px;
     display: flex;
     align-items: center;
 }
@@ -547,7 +549,7 @@ img{
     font-size: 11px;
     color: #fff;
 }
- #footerId .nav-link.active, #footerId .nav-link.show {
+ #footerId .nav-link.active, #footerId .nav-link.show, #mini-footerId .nav-link.active, #mini-footerId .nav-link.show {
     color: #fff;
     font-family: 'Codec Cold Trial News';
     text-decoration: underline;
@@ -557,7 +559,7 @@ img{
     font-size: 16px;
     position: relative;
 }
-#footerId .nav-link {
+#footerId .nav-link, #mini-footerId .nav-link {
     color: #fff;
     text-transform: uppercase;
     font-family: 'Codec Cold Trial News';
@@ -568,8 +570,7 @@ img{
     font-size: 16px;
     position: relative;
 }
-#footerId .nav-link:focus,
-#footerId .nav-link:hover {
+#footerId .nav-link:focus,#footerId .nav-link:hover, #mini-footerId .nav-link:focus,#mini-footerId .nav-link:hover {
     color:red;
 }
 #mini-headerId .mini-header-nav{
@@ -578,7 +579,7 @@ img{
 .container.reviews {
     background: #fff;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    min-height: 2600px;
+    min-height: 1900px;
     margin-top: 20px;
     padding: 60px;
     position: relative;
@@ -735,31 +736,39 @@ img{
 
 
 
+@media screen and (max-width: 4000px){
+    .box-1{
+        min-height: 2000px;
+    }
+}
 
+@media screen and (max-width: 3000px){
+    .box-1{
+        min-height: 1400px;
+    }
+}
 
+@media screen and (max-width: 2500px){
+    .box-1{
+        min-height: 1200px;
+    }
+}
 
+@media screen and (max-width: 2300px){
+    .box-1{
+        min-height: 800px;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 1900px){
+    .box-1{
+        min-height: 770px;
+    }
+}
 
 @media screen and (max-width: 1400px){
     .box-1{
         min-height: 700px;
-    }
-    .reviews-page{
-        background: url(../assets/images/bg-reviews-header-2.jpg) no-repeat 0 0,
-        url(../assets/images/bg-footer-home.jpg) no-repeat 0 100%;
-        background-size: 100% auto;
-        min-height: 2249px;
     }
 }
 
@@ -788,7 +797,7 @@ img{
     .home-page #headerId{
         background-size: auto;
         background-position: 50% 0;
-        background-image: url(../assets/images/bg-two-mobile.jpg);
+        background-image: url(../assets/images/bg/bg-two-mobile.jpg);
     }
 
     .box-1 h1{
