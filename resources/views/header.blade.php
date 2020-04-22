@@ -9,6 +9,7 @@
  <link rel="stylesheet" href="{{asset('assets//slick/slick-theme.css')}}">
  <link rel="stylesheet" href="{{asset('styles/style.css')}}">
  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body class="home-page">
 <header id="headerId">
@@ -38,14 +39,15 @@
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav mx-auto align-md-items-center">
+                        <div class="navbar-nav mx-auto align-md-items-center ">
                           <a class="nav-item nav-link active" href="/">Главная </a>
-                          <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас</a>
-                          <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены</a>
+                          <a class="nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="#yak1">О нас</a>
+                          <a class="nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="#yak2">Цены</a>
                           <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы</a>
-                          <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги</a>
+                          <a class="nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="#yak3">Услуги</a>
                           @auth
                           <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
+                          <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/signup/admin"> Управление Заявками</a>
                           @endauth
                         </div>
                   </div>

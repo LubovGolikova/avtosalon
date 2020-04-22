@@ -1,7 +1,7 @@
 
 @include('header')
 
-  <div class="container box-1 ">
+  <div  class="container box-1 ">
       <div class="col-md-7 col-lg-6 text-left ">
          <h3>Уроки вождения</h3>
          <h1>У частного инструктура</h1>
@@ -9,12 +9,12 @@
          автомобилистом и перестанете бояться дорог!</p>
          <h4><span>225</span> грн/час первый урок!</h4>
 
-         <a class="btn btn-default" href="/">Записаться</a>
+         <a  id="yak1" class="btn btn-default scrollLink" href="#yak4">Записаться</a>
       </div>
   </div>
 
 
-  <div class="container box-2">
+  <div  class="container box-2">
       <div class="row">
           <div class="col-md-6 ">
               <img src="{{asset('assets/images/cars.png')}}" alt=""/>
@@ -34,10 +34,10 @@
           </div>
       </div>
   </div>
-s
+
 </header>
 
-<section class="box-3-about-1">
+<section  class="box-3-about-1">
     <div class="base-color-box-3">
         <div class="container ">
             <div class="col align-items-center text-center justify-content-center py-3">
@@ -70,7 +70,7 @@ s
     </div>
 </section>
 
-<section class="box-5-prices">
+<section id="yak2" class="box-5-prices scrollLink">
     <div class="container">
         <div class="col align-items-center  text-center  justify-content-center pt-5 ">
                <h5>Цены</h5>
@@ -102,7 +102,7 @@ s
     </div>
 </section>
 
-<section class="box-6-sign">
+<section id="yak4" class="box-6-sign scrollLink">
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -170,7 +170,8 @@ s
      @if(session('success'))
           <div class="wrap">
                <div class="popup">
-                   Спассибо
+                   <p>СПАСИБО!</p>
+                   <p>Ваша заявка отправлена.</p>
                     <i class="fa fa-close "></i>
                </div>
           </div>
@@ -201,7 +202,7 @@ s
                  <a href="/reviews" ><p>Читать отзывы</p></a>
              </div>
         </div>
-        <div class="container-add-services col col-md-12 align-items-center  text-center  justify-content-center mt-5">
+        <div id="yak3"  class="container-add-services col col-md-12 align-items-center  text-center  justify-content-center mt-5 scrollLink">
             <h6>Дополнительные услуги</h6>
             <div class="base-color-footer ">
                 <div class="row align-items-center  text-center  justify-content-center px-5">
@@ -288,7 +289,12 @@ $('.slider').slick({
   slidesToShow: 3,
   slidesToScroll: 3
 });
-
+//$('.scrollLink, .nav-link, .navbar-brand,.container-add-services').click(function() {
+//    var sectionTo = $(this).attr('href');
+//    $('html, body').animate({
+//      scrollTop: $(sectionTo).offset().top
+//    }, 1500);
+//});
 </script>
 </body>
 </html>

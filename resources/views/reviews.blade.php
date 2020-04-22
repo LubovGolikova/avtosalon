@@ -45,7 +45,8 @@
         @if(session('success'))
             <div class="wrap">
                 <div class="popup">
-                    Спасибо
+                      <p>СПАСИБО!</p>
+                      <p>Ваш отзыв отправлен.</p>
                     <i class="fa fa-close "></i>
                 </div>
             </div>

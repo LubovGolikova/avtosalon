@@ -676,15 +676,20 @@ img{
     justify-content: center;
 }
 .popup{
+    font-family: "CodecColdTrial";
+    line-height: 1.2;
     background: #fff;
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    color:#407a80;
+    font-weight: 700;
+    width: 350px;
     height: 250px;
     border: 1px #333 solid;
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
 .popup .fa-close{

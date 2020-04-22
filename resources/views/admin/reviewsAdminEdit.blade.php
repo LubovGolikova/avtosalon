@@ -50,61 +50,51 @@
         </div>
 
         <div class="container mt-5">
-        <h3>Ответ</h3>
-        <div class="container-reviews-send">
-            <form method="POST" action="/reviews/admin/{{$review->id}}/answer">
-                @csrf
-                @method('PUT')
-                @if($review->children)
-                    <input type="hidden" name="id" value="{{$review->children->id}}"/>
-                 @endif
-                <div class="form-group row">
-                    <label for="name" class="col-sm-1 col-form-label">Имя<span>*</span></label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control   @error('name') is-invalid @enderror" id="name" name="name" value="Администратор">
-                          @error('name')
-                              <div class="invalid-feedback">{{ $message }}</div>
-                          @enderror
+            <h3>Ответ</h3>
+            <div class="container-reviews-send">
+                <form method="POST" action="/reviews/admin/{{$review->id}}/answer">
+                    @csrf
+                    @method('PUT')
+                    @if($review->children)
+                        <input type="hidden" name="id" value="{{$review->children->id}}"/>
+                     @endif
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-1 col-form-label">Имя<span>*</span></label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control   @error('name') is-invalid @enderror" id="name" name="name" value="Администратор">
+                              @error('name')
+                                  <div class="invalid-feedback">{{ $message }}</div>
+                              @enderror
+                        </div>
                     </div>
-                </div>
-                 <div class="form-group row">
-                     <label for="review" class="col-sm-1 col-form-label">Ответ<span>*</span></label>
-                     <div class="col-sm-10">
-                       <textarea class="form-control   @error('review') is-invalid @enderror" id="review" name="answer" style="height: 105px">{{$review->children?$review->children->review:''}}</textarea>
-                        @error('answer')
-                             <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                     </div>
-                </div>
-                <div class="form-group row ">
-                     <label for="submit" class="col-sm-1 col-form-label">Отмена</label>
-                        <button type="submit" class="btn btn-default btn-review">
-                        Ответить
-                        </button>
-                </div>
-            </form>
+                     <div class="form-group row">
+                         <label for="review" class="col-sm-1 col-form-label">Ответ<span>*</span></label>
+                         <div class="col-sm-10">
+                           <textarea class="form-control   @error('review') is-invalid @enderror" id="review" name="answer" style="height: 105px">{{$review->children?$review->children->review:''}}</textarea>
+                            @error('answer')
+                                 <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                         </div>
+                    </div>
+                    <div class="form-group row ">
+                         <label for="submit" class="col-sm-1 col-form-label">Отмена</label>
+                            <button type="submit" class="btn btn-default btn-review">
+                            Ответить
+                            </button>
+                    </div>
+                </form>
+            </div>
         </div>
-</div>
-
-
-
-
-
-
-
-
-
 
         @if(session('success'))
             <div class="wrap">
                 <div class="popup">
-                    Спассибо
+                    <p>СПАСИБО!</p>
+                    <p>Ваш отзыв отправлен.</p>
                     <i class="fa fa-close "></i>
                 </div>
             </div>
         @endif
-
-
 
     </div>
 
