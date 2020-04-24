@@ -8,18 +8,18 @@
             </div>
             <div class="footer-block row align-items-center  text-center  justify-content-center ">
                 <div class="social">
-                    <a href="#"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/%D0%9C%D0%B0%D0%BA%D1%81-%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2-109746004019956/"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/avtoinstruktor_zp/?igshid=z8y4l7krbxf0"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://t.me/MaksiMaks81"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
                 </div>
              </div>
              <div class="footer-base row align-items-center  text-center  justify-content-center">
                 <a href="/"><img src="{{asset('assets/images/logo.png')}}" alt=""/></a>
-                <a class="nav-link active" href="/">Главная<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('us') ? 'active' : '' !!}" href="/">О нас<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/">Цены<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/">Отзывы<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/">Услуги<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('/') ? 'active' : '' !!}" href="/">Главная<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('/#yak1') ? 'active' : '' !!}" href="#yak1">О нас<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('/#yak2') ? 'active' : '' !!}" href="#yak2">Цены<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы<span class="sr-only">(current)</span></a>
+                <a class="nav-link {!!Request::is('/#yak3') ? 'active' : '' !!}" href="#yak3">Услуги<span class="sr-only">(current)</span></a>
             </div>
          </div>
          <div class="footerId-rights row justify-content-md-end">

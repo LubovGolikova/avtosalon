@@ -17,7 +17,7 @@ class CreateSignUpsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('phone');
-            $table->boolean('robot');
+            $table->boolean('robot')->nullable();
             $table->timestamps();
         });
     }

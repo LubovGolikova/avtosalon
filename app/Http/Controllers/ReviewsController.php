@@ -14,7 +14,7 @@ class ReviewsController extends Controller
      */
     public function index()
     {
-        $reviews = Review::where('display', 1)->where('parent_id', '=', null)->orderBy('created_at', 'DESC')->paginate(8);
+      $reviews = Review::where('display', 1)->where('parent_id', '=', null)->orderBy('created_at', 'DESC')->paginate(8);
         return view('reviews', compact('reviews' ));
     }
     /**

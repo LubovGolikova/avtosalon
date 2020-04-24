@@ -81,6 +81,7 @@ class SignupAdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        SignUp::find($id)->delete();
+        return back();
     }
 }

@@ -18,9 +18,9 @@
       <a href="" class="d-block">+38 095 319 34 08</a>
 
      <div class="social">
-        <a href="#"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/%D0%9C%D0%B0%D0%BA%D1%81-%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2-109746004019956/"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/avtoinstruktor_zp/?igshid=z8y4l7krbxf0"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <a href="https://t.me/MaksiMaks81"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
      </div>
   </div>
 
@@ -28,7 +28,7 @@
         <div class="container">
          @csrf
          <div class="navbar-brand"> <a href="/">
-             <img src="{{asset('assets/images/logo-2.png')}}" alt=""/>
+             <img src="{{asset('assets/images/logo.png')}}" alt=""/>
              </a>
          </div>
           <button class="mini-header-nav navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,14 +36,14 @@
           </button>
           <div class=" mini-header-nav collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="mini-header-nav navbar-nav mx-auto align-md-items-center">
-              <a class="mini-header-nav nav-item nav-link active" href="/">Главная <span class="sr-only">(current)</span></a>
-              <a class=" mini-header-nav nav-item nav-link {!!Request::is('about') ? 'active' : '' !!}" href="/about">О нас</a>
-              <a class=" mini-header-nav nav-item nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/prices">Цены</a>
+              <a class="mini-header-nav nav-item nav-link {!!Request::is('/') ? 'active' : '' !!}" href="/">Главная <span class="sr-only">(current)</span></a>
+              <a class=" mini-header-nav nav-item nav-link {!!Request::is('/#yak1') ? 'active' : '' !!}" href="/#yak1">О нас</a>
+              <a class=" mini-header-nav nav-item nav-link {!!Request::is('/#yak2') ? 'active' : '' !!}" href="/#yak2">Цены</a>
               <a class=" mini-header-nav nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы</a>
-              <a class=" mini-header-nav nav-item nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/services">Услуги</a>
+              <a class=" mini-header-nav nav-item nav-link {!!Request::is('/#yak3') ? 'active' : '' !!}" href="/#yak3">Услуги</a>
               @auth
-                   <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
-                   <a class="nav-item nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/signup/admin"> Управление Заявками</a>
+                   <a class="nav-item nav-link {!!Request::is('/reviews/admin') ? 'active' : '' !!}" href="/reviews/admin"> Управление Отзывами</a>
+                   <a class="nav-item nav-link {!!Request::is('/signup/admin') ? 'active' : '' !!}" href="/signup/admin"> Управление Заявками</a>
                @endauth
             </div>
           </div>

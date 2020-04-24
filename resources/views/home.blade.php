@@ -142,8 +142,8 @@
                     <div class="form-group row">
                         <div class="col ">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="robot" value="0" id="robot" {{ old('robot') ? 'checked' : '' }}>
-                                <label class="form-check-label" for="robot">
+                                <input class="form-check-input" type="checkbox" required name="robot" value="0" id="robot" {{ old('robot') ? 'checked' : '' }}>
+                                <label class="form-check-label" for="robot" >
                                    Я не робот
                                 </label>
                             </div>
@@ -185,7 +185,7 @@
             <div class="base-color-box-7  text-center  mb-5">
                 Отзывы наших учеников
             </div>
-             <div class="row  align-items-center  text-center  justify-content-center slider">
+             <div class="row  align-items-center  text-center  justify-content-center slider home-reviews-block">
                 @foreach($reviews as $review)
                     <div class="box-7-reviews-box-1 col-md-3">
                         <div class="row justify-content-md-between m-0 p-1">
@@ -198,42 +198,43 @@
                     </div>
                @endforeach
              </div>
-             <div class="box-7-reviews-box-1-reviews row justify-content-md-end">
+             <div class="box-7-reviews-box-1-reviews row justify-content-md-end justify-content-center mt-3 mt-md-0">
                  <a href="/reviews" ><p>Читать отзывы</p></a>
              </div>
         </div>
         <div id="yak3"  class="container-add-services col col-md-12 align-items-center  text-center  justify-content-center mt-5 scrollLink">
             <h6>Дополнительные услуги</h6>
             <div class="base-color-footer ">
-                <div class="row align-items-center  text-center  justify-content-center px-5">
+                <div class="row align-items-center  text-center  justify-content-center px-lg-5">
                  <div class="col-md-6">
-                    <div class="row py-5">
-                        <img src="{{asset('assets/images/footer-fig3.png')}}" alt=""/>
-                        <div class="col">
+                    <div class="py-md-5 py-2 d-md-flex">
+                        <div class="col-md-5"> <img src="{{asset('assets/images/footer-fig3.png')}}" alt=""/></div>
+
+                        <div class="col mt-3 mt-md-0 text-center text-md-left">
                             <h2>Выбор авто</h2>
                             <p>Помощь в выборе и покупке авто.
                                Выезд вместе с покупателем на место продажи.</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <img src="{{asset('assets/images/footer-fig4.png')}}" alt=""/>
-                        <div class="col">
+                    <div class="d-md-flex">
+                       <div class="col-md-5">  <img src="{{asset('assets/images/footer-fig4.png')}}" alt=""/></div>
+                        <div class="col mt-3 mt-md-0 text-center text-md-left">
                             <h2>Консультации</h2>
                             <p>Консультирование в вопросах ремонта автомобиля.</p>
                         </div>
                      </div>
                  </div>
                 <div class="col-md-6">
-                    <div class="row py-5">
-                       <img src="{{asset('assets/images/footer-fig2.png')}}" alt=""/>
-                       <div class="col">
+                    <div class="py-md-5 py-2 d-md-flex">
+                      <div class="col-md-5">  <img src="{{asset('assets/images/footer-fig2.png')}}" alt=""/></div>
+                       <div class="col mt-3 mt-md-0 text-center text-md-left">
                            <h2>Перегон авто</h2>
                            <p>Помощь в выборе и покупке авто в странах ЕС. Перегон авто через границу.</p>
                        </div>
                     </div>
-                    <div class="row">
-                        <img src="{{asset('assets/images/footer-fig1.png')}}" alt=""/>
-                         <div class="col">
+                    <div class="d-md-flex">
+                       <div class="col-md-5">  <img src="{{asset('assets/images/footer-fig1.png')}}" alt=""/></div>
+                         <div class="col mt-3 mt-md-0 text-center text-md-left">
                             <h2>Помощь по телефону</h2>
                             <p>Круглосуточная поддержка по телефону в период обучения и после в любых вопросах.</p>
                         </div>
@@ -249,27 +250,28 @@
             </div>
             <div class="footer-block row align-items-center  text-center  justify-content-center ">
                 <div class="social">
-                    <a href="#"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/avtoinstruktor_zp/?igshid=z8y4l7krbxf0"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/%D0%9C%D0%B0%D0%BA%D1%81-%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2-109746004019956/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://t.me/MaksiMaks81"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
                 </div>
              </div>
-             <div class="footer-base row align-items-center  text-center  justify-content-center">
-                <a href="/"><img src="{{asset('assets/images/logo.png')}}" alt=""/></a>
-                <a class="nav-link active" href="/">Главная<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('us') ? 'active' : '' !!}" href="/">О нас<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('prices') ? 'active' : '' !!}" href="/">Цены<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/">Отзывы<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('services') ? 'active' : '' !!}" href="/">Услуги<span class="sr-only">(current)</span></a>
+             <div class="footer-base row align-items-center  text-center  justify-content-center flex-column flex-md-row">
+                <a href="/" class="my-3 my-md-0"><img src="{{asset('assets/images/logo.png')}}" alt=""/></a>
+                <a class="nav-link {!!Request::is('/') ? 'active' : '' !!}" href="/">Главная</a>
+                <a class="nav-link {!!Request::is('/#yak1') ? 'active' : '' !!}" href="#yak1">О нас</a>
+                <a class="nav-link {!!Request::is('/#yak2') ? 'active' : '' !!}" href="#yak2">Цены</a>
+                <a class="nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы</a>
+                <a class="nav-link {!!Request::is('/#yak3') ? 'active' : '' !!}" href="#yak3">Услуги</a>
             </div>
          </div>
-         <div class="footerId-rights row justify-content-md-end">
+         <div class="footerId-rights row justify-content-md-end justify-content-center">
                 <p>&copy; Все права защищены</p>
          </div>
     </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+{{--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="{{asset('assets//slick/slick.min.js')}}"></script>
 <script>
@@ -287,7 +289,35 @@ if(e.target.classList.contains('wrap'))
 $('.slider').slick({
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 3
+  slidesToScroll: 3,
+   responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+});
+
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 500);
+    }
+
 });
 </script>
 </body>

@@ -93,14 +93,13 @@ img{
     z-index: 10;
 }
 .content-city-header{
-    margin-left: 400px;
+    /*margin-left: 400px;*/
 }
 .container-inner-top{
      width: 100%;
-     height: 40px;
      background-color:#7f979b;
      opacity: .6;
-     padding-top: 3px;
+    padding: 10px 0;
      padding-right: 200px;
  }
 .container-inner-top a:nth-child(1){
@@ -441,13 +440,13 @@ img{
     color: #000304;
     font-family: 'Codec Cold Trial News';
     font-size: 14px;
-    text-align: left;
+
 }
 .base-color-footer h2{
     color: #000304;
     font-family: 'Codec Cold Heavy Trial';
     font-size: 18px;
-    text-align: left;
+
 }
 #footerId .box-7-reviews-box-1{
     border-width: 2px;
@@ -488,7 +487,6 @@ img{
     opacity: .6;
     position: relative;
     z-index: 10;
-    height: 426px;
 }
 .footer-block{
     margin-top: 120px;
@@ -721,7 +719,9 @@ img{
     left: -35px;
 }
 
-
+.container-signup p{
+    padding: 5px 5px 0px 5px;
+}
 
 
 
@@ -788,6 +788,7 @@ img{
     .box-1 h4{
         font-size: 25px;
     }
+
 }
 
 @media screen and (max-width: 768px){
@@ -820,5 +821,15 @@ img{
     }
     .box-6-sign .form-group{
         width: 100%;
+    }
+    .home-reviews-block{
+        margin: 0 40px;
+    }
+    .home-page #footerId{
+        background-size: auto;
+        background-position: 0 100%;
+    }
+    .container-inner-top{
+        padding-right: 0
     }
 }

@@ -18,7 +18,7 @@ class ReviewsAdminController extends Controller
     }
     public function index()
     {
-        $reviews = Review::where('parent_id', '=', null)->orderBy('created_at', 'DESC')->paginate(8);
+       $reviews = Review::where('parent_id', '=', null)->orderBy('created_at', 'DESC')->paginate(8);
         return view('admin.reviewsAdmin', compact('reviews' ));
     }
 
@@ -104,19 +104,20 @@ class ReviewsAdminController extends Controller
         return back();
     }
 
-    public function answer(Request $request, $id){
-        if($request->id){
-            $review = Review::find($request->id);
+    public function answer(Request $request, $id)
+    {
+        if ($request->idanswer) {
+            $review = Review::find($request->idanswer);
         }
         else{
-        $review = new Review();
+            $review = new Review();
         }
-        $review->name = $request->name;
-        $review->review = $request->answer;
-        $review->rating = 0;
-        $review->display = 1;
-        $review->parent_id = $id;
-        $review->save();
-        return back()->with('success', 'Ответ сохранен');
+            $review->name = $request->name;
+            $review->review = $request->answer;
+            $review->rating = 0;
+            $review->display = 1;
+            $review->parent_id = $id;
+            $review->save();
+            return back()->with('success', 'Ответ сохранен');
     }
 }

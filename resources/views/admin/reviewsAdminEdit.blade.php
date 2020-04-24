@@ -56,7 +56,7 @@
                     @csrf
                     @method('PUT')
                     @if($review->children)
-                        <input type="hidden" name="id" value="{{$review->children->id}}"/>
+                        <input type="hidden" name="idanswer" value="{{$review->children->id}}"/>
                      @endif
                     <div class="form-group row">
                         <label for="name" class="col-sm-1 col-form-label">Имя<span>*</span></label>
@@ -90,7 +90,7 @@
             <div class="wrap">
                 <div class="popup">
                     <p>СПАСИБО!</p>
-                    <p>Ваш отзыв отправлен.</p>
+                    <p>{{session('success')}}</p>
                     <i class="fa fa-close "></i>
                 </div>
             </div>

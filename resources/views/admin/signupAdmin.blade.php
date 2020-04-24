@@ -3,8 +3,15 @@
     <div class="container">
         <h3>Заявки</h3>
         @foreach($signups as $signup)
-            <p>{{$signup->name}}</p>
+        <div class="container-signup row">
+            <p>{{$signup->name}} </p>
             <p>{{$signup->phone}}</p>
+            </div>
+            <form action="/signup/admin/{{$signup->id}}" method="POST">
+                @csrf
+               @method('DELETE')
+            <button  class="btn btn-secondary">Удалить</button>
+            </form>
         @endforeach
         <div class="container-pagination">
             {{$signups->links()}}
