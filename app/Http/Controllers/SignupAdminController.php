@@ -14,7 +14,7 @@ class SignupAdminController extends Controller
      */
     public function index()
     {
-        $signups = SignUp::orderBy('created_at', 'DESC')->paginate(8);
+        $signups = SignUp::orderBy('created_at', 'DESC')->paginate(20);
         return view('admin.signupAdmin', compact('signups'));
     }
 

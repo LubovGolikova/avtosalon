@@ -2,17 +2,36 @@
 <div class="container reviews">
     <div class="container">
         <h3>Заявки</h3>
+       <table class="table" id="myTable">
+              <thead>
+                  <tr>
+                       <th>#</th>
+                       <th>Имя</th>
+                       <th>Номер телефона</th>
+                       <th>Дата</th>
+                       <th></th>
+                  </tr>
+              </thead>
+              <tbody>
         @foreach($signups as $signup)
-        <div class="container-signup row">
-            <p>{{$signup->name}} </p>
-            <p>{{$signup->phone}}</p>
+        <tr>
+            <div class="container-signup row">
+            <td>{{$loop->iteration}}</td>
+            <td><p>{{$signup->name}} </p></td>
+            <td><p>{{$signup->phone}}</p></td>
+            <td><p>{{\Illuminate\Support\Carbon::parse($signup->created_at)->format('d.m.Y')}}</p></td>
             </div>
+            <td>
             <form action="/signup/admin/{{$signup->id}}" method="POST">
                 @csrf
                @method('DELETE')
             <button  class="btn btn-secondary">Удалить</button>
             </form>
+            </td>
+        </tr>
         @endforeach
+          </tbody>
+          </table>
         <div class="container-pagination">
             {{$signups->links()}}
         </div>
