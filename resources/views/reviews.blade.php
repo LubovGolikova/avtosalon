@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group row ">
                       <label for="submit" class="col-sm-1 col-form-label">Отмена</label>
-                      <button type="submit" class="btn btn-default btn-review">
+                      <button type="submit" class=" btn-default btn-review">
                             Оставить отзыв
                       </button>
                 </div>

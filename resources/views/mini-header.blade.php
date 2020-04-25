@@ -11,17 +11,19 @@
 </head>
 <body class="reviews-page">
 <header id="mini-headerId">
-  <div class="container-inner-top d-md-flex flex-row justify-content-center align-items-center">
-
-      <a href="" class="d-block">г.Запорожье</a>
-      <a href="" class="d-block">+38 067 929 32 22</a>
-      <a href="" class="d-block">+38 095 319 34 08</a>
-
-     <div class="social">
-        <a href="https://www.facebook.com/%D0%9C%D0%B0%D0%BA%D1%81-%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2-109746004019956/"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/avtoinstruktor_zp/?igshid=z8y4l7krbxf0"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-        <a href="https://t.me/MaksiMaks81"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
-     </div>
+  <div class="container-inner-top">
+      <div class="container d-md-flex flex-row justify-content-center align-items-center text-center">
+            <div class="content-city-header d-md-flex flex-row justify-content-center  ml-auto">
+              <a href="" class="d-block">г.Запорожье</a>
+              <a href="" class="d-block">+38 067 929 32 22</a>
+              <a href="" class="d-block">+38 095 319 34 08</a>
+            </div>
+             <div class="social ml-auto mt-2 mt-md-0">
+                <a href="https://www.facebook.com/%D0%9C%D0%B0%D0%BA%D1%81-%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2-109746004019956/"><i class="fa fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/avtoinstruktor_zp/?igshid=z8y4l7krbxf0"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                <a href="https://t.me/MaksiMaks81"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
+             </div>
+      </div>
   </div>
 
   <nav class="mini-header-nav navbar navbar-expand-lg navbar-light bg-light-blue">

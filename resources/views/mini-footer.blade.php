@@ -13,16 +13,16 @@
                     <a href="https://t.me/MaksiMaks81"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
                 </div>
              </div>
-             <div class="footer-base row align-items-center  text-center  justify-content-center">
-                <a href="/"><img src="{{asset('assets/images/logo.png')}}" alt=""/></a>
-                <a class="nav-link {!!Request::is('/') ? 'active' : '' !!}" href="/">Главная<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('/#yak1') ? 'active' : '' !!}" href="#yak1">О нас<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('/#yak2') ? 'active' : '' !!}" href="#yak2">Цены<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы<span class="sr-only">(current)</span></a>
-                <a class="nav-link {!!Request::is('/#yak3') ? 'active' : '' !!}" href="#yak3">Услуги<span class="sr-only">(current)</span></a>
+             <div class="footer-base row align-items-center  text-center  justify-content-center flex-column flex-md-row">
+                <a href="/" class="my-3 my-md-0"><img src="{{asset('assets/images/logo.png')}}" alt=""/></a>
+                <a class="nav-link {!!Request::is('/') ? 'active' : '' !!}" href="/">Главная</a>
+                <a class="nav-link {!!Request::is('/#yak1') ? 'active' : '' !!}" href="#yak1">О нас</a>
+                <a class="nav-link {!!Request::is('/#yak2') ? 'active' : '' !!}" href="#yak2">Цены</a>
+                <a class="nav-link {!!Request::is('reviews') ? 'active' : '' !!}" href="/reviews">Отзывы</a>
+                <a class="nav-link {!!Request::is('/#yak3') ? 'active' : '' !!}" href="#yak3">Услуги</a>
             </div>
          </div>
-         <div class="footerId-rights row justify-content-md-end">
+         <div class="footerId-rights row justify-content-md-end  justify-content-center">
                 <p>&copy; Все права защищены</p>
          </div>
     </div>
@@ -33,8 +33,8 @@
 <script src="{{asset('/assets/rate/jquery.raty.js')}}"></script>
 <script>
 $('.rating').raty({
-starOff:     '/assets/rate/images/star-off.png',
-starOn:      '/assets/rate/images/star-on2.png',
+starOff:'/assets/rate/images/star-off.png',
+starOn:'/assets/rate/images/star-on2.png',
 click: function(score, evt) {
     $('.input-rating').val(score)
   }
@@ -51,7 +51,6 @@ console.log(e.target)
 if(e.target.classList.contains('wrap'))
     $('.wrap').remove()
 });
-
 
 </script>
 </body>

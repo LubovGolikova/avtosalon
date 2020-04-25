@@ -3,7 +3,7 @@
     <div class="container">
         <h3>Отзывы</h3>
         <div class="container-reviews-send">
-            <form method="POST" action="/reviews/admin/{{$review->id}}">
+            <form  method="POST" action="/reviews/admin/{{$review->id}}">
             @csrf
             @method('PUT')
                 <div class="form-group row">
