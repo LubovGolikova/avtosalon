@@ -2,6 +2,7 @@
 <div class="container reviews">
     <div class="container">
         <h3>Заявки</h3>
+        <div class="container-table">
        <table class="table" id="myTable">
               <thead>
                   <tr>
@@ -13,6 +14,7 @@
                   </tr>
               </thead>
               <tbody>
+
                     @foreach($signups as $signup)
                     <tr>
                         <div class="container-signup row">
@@ -29,11 +31,15 @@
                             </form>
                         </td>
                     </tr>
-                    @endforeach
+
+                      @endforeach
               </tbody>
+
        </table>
+       </div>
         <div class="container-pagination">
             {{$signups->links()}}
+
         </div>
     </div>
 
