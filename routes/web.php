@@ -20,3 +20,10 @@ Route::put('/reviews/admin/{id}/answer',"ReviewsAdminController@answer");
 Route::resource('/signup/admin',"SignupAdminController");
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+Route::get('/clear', function(){
+    Artisan::call('cache:clear');
+    Artisan::call('view:clear');
+    return 'Cache clear!';
+});
