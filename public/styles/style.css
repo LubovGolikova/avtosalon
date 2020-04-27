@@ -99,8 +99,9 @@ img{
      width: 100%;
      background-color:#7f979b;
      opacity: .6;
-    padding: 10px 0;
-     padding-right: 200px;
+     padding: 10px 0;
+    padding-right: 500px;
+    padding-left: 650px;
  }
 .container-inner-top a:nth-child(1){
      margin:0 5px;
@@ -740,11 +741,16 @@ img{
     .box-1{
         min-height: 2000px;
     }
+
 }
 
 @media screen and (max-width: 3000px){
     .box-1{
         min-height: 1400px;
+    }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:0px;
     }
 }
 
@@ -752,11 +758,19 @@ img{
     .box-1{
         min-height: 1200px;
     }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:0px;
+    }
 }
 
 @media screen and (max-width: 2300px){
     .box-1{
         min-height: 900px;
+    }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:0px;
     }
 }
 
@@ -764,10 +778,18 @@ img{
     .box-1{
         min-height: 800px;
     }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:120px;
+    }
 }
 @media screen and (max-width: 1900px){
     .box-1{
         min-height: 770px;
+    }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:120px;
     }
 }
 
@@ -775,11 +797,23 @@ img{
     .box-1{
         min-height: 700px;
     }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:120px;;
+    }
 }
 
 @media screen and (max-width: 1200px){
     .box-1{
         min-height: 500px;
+    }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:0px;
+    }
+    .home-page #footerId {
+        flex: 0 0 auto;
+        background: url(../assets/images/bg/footer.jpg) no-repeat 0 100%;
     }
 }
 
@@ -805,6 +839,14 @@ img{
     }
     .name-container-reviews-answer {
         margin-right: 10px;
+    }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:0px;
+    }
+    .home-page #footerId {
+        flex: 0 0 auto;
+        background: url(../assets/images/bg/footer.jpg) no-repeat 0 100%;
     }
 }
 
@@ -834,6 +876,7 @@ img{
     }
     .container-inner-top a{display: inline-block !important}
     .base-color-box-5{
+        background-color: transparent;
         margin: 20px 0 40px 0;
     }
     .box-6-sign .form-group{
@@ -847,7 +890,8 @@ img{
         background-position: 0 100%;
     }
     .container-inner-top{
-        padding-right: 0
+        padding-right: 0;
+        padding-left:0px;
     }
     .form-control-r {
         width: 100%;
@@ -862,6 +906,7 @@ img{
     .name-container-reviews-answer {
         margin-right: 10px;
     }
+
 }
 @media screen and (max-width: 480px) {
     .container-pagination {
@@ -880,5 +925,9 @@ img{
     }
     .btn-group, .btn-group-vertical {
         display: block;
+    }
+    .container-inner-top{
+        padding-right: 0px;
+        padding-left:0px;
     }
 }
