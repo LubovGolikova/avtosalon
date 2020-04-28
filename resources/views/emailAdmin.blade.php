@@ -3,11 +3,11 @@
     <table class="table">
         <thead>
             <tr>
-                <th>#</th>
-                   <th>Имя</th>
-                   <th>Номер телефона</th>
-                   <th>Дата</th>
-                   <th></th>
+               <th>#</th>
+               <th>Имя</th>
+               <th>Номер телефона</th>
+               <th>Дата</th>
+               <th></th>
             </tr>
         </thead>
         <tbody>
