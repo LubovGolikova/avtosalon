@@ -47,7 +47,7 @@ class SingUpController extends Controller
         $signup->phone = $request->phone;
         $signup->robot = $request->robot;
         $signup->save();
-        Mail::to('profidriverzp@gmail.com ')->send(new OrderShipped($signup));
+        Mail::to('profidriverzp@gmail.com')->send(new OrderShipped($signup));
         return redirect('/')->with('success', 'Запись сохранена');
     }
 
