@@ -917,9 +917,19 @@ img{
     .container-pagination {
         margin-top: 5px;
         padding-left: 0px;
+        position: static;
+        padding-bottom: 20px;
+    }
+    .pagination{
+        justify-content: center;
+    }
+    .container-reviews-receive{
+        margin-bottom: 30px;
     }
     .container.reviews {
         min-height: 1200px;
+        padding: 0px;
+        padding-top:20px;
     }
     .name-container-reviews-answer {
         margin-right: 10px;
@@ -934,5 +944,15 @@ img{
     .container-inner-top{
         padding-right: 0px;
         padding-left:0px;
+    }
+    .container-reviews-send{
+        padding: 30px;
+    }
+    .col-form-label{
+        text-align: left;
+    }
+    #myTable_wrapper{
+        max-width: 100%;
+        overflow: auto;
     }
 }

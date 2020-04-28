@@ -52,15 +52,15 @@
     <div class="base-color-box-4">
         <div class="container mt-5 ">
             <div class="row align-items-center justify-content-center">
-                <div class="col-md-4">
+                <div class="col-md-4 revealator-zoomin">
                     <img src="{{asset('assets/images/fig1.png')}}" alt=""/>
                     <p>Имеется частная закрытая площадка для отработки навыков вождения для наших учеников!</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 revealator-zoomin revealator-delay1">
                     <img src="{{asset('assets/images/fig2.png')}}" alt=""/>
                     <p>18 летний стаж работы, из них 10 лет на должности автоинструктора в лучших автошколах Запорожья!</p>
                                       </div>
-                <div class="col-md-4">
+                <div class="col-md-4 revealator-zoomin revealator-delay2">
                     <img src="{{asset('assets/images/fig3.png')}}" alt=""/>
                     <p>Десятки благодарных учеников и уверенных водителей на дорогах нашего города!</p>
                 </div>
@@ -78,8 +78,8 @@
          </div>
         <div class="row align-items-center justify-content-center pt-5 text-center">
             <div class="col-md-4">
-                <img src="{{asset('assets/images/wheel-fig-1.jpg')}}" alt=""/>
-                <div class="price base-color-box-5">
+                <img src="{{asset('assets/images/wheel-fig-1.jpg')}}" alt="" class="revealator-slideleft"/>
+                <div class="price base-color-box-5 ">
                     <p><span>250</span> грн/час</p>
                     <p>Механика</p>
                  </div>
@@ -92,7 +92,7 @@
                  </div>
             </div>
             <div class="col-md-4">
-                 <img src="{{asset('assets/images/wheel-fig-3.jpg')}}" alt=""/>
+                 <img src="{{asset('assets/images/wheel-fig-3.jpg')}}" alt="" class="revealator-slideright"/>
                  <div class="price base-color-box-5">
                     <p><span>225</span> грн/час</p>
                     <p>Ваше авто</p>
@@ -207,7 +207,7 @@
             <div class="base-color-footer ">
                 <div class="row align-items-center  text-center  justify-content-center px-lg-5">
                  <div class="col-md-6">
-                    <div class="py-md-5 py-2 d-md-flex">
+                    <div class="py-md-5 py-2 d-md-flex  revealator-zoomin">
                         <div class="col-md-5"> <img src="{{asset('assets/images/footer-fig3.png')}}" alt=""/></div>
 
                         <div class="col mt-3 mt-md-0 text-center text-md-left">
@@ -216,7 +216,7 @@
                                Выезд вместе с покупателем на место продажи.</p>
                         </div>
                     </div>
-                    <div class="d-md-flex">
+                    <div class="d-md-flex  revealator-zoomin">
                        <div class="col-md-5">  <img src="{{asset('assets/images/footer-fig4.png')}}" alt=""/></div>
                         <div class="col mt-3 mt-md-0 text-center text-md-left">
                             <h2>Консультации</h2>
@@ -225,14 +225,14 @@
                      </div>
                  </div>
                 <div class="col-md-6">
-                    <div class="py-md-5 py-2 d-md-flex">
+                    <div class="py-md-5 py-2 d-md-flex  revealator-zoomin">
                       <div class="col-md-5">  <img src="{{asset('assets/images/footer-fig2.png')}}" alt=""/></div>
                        <div class="col mt-3 mt-md-0 text-center text-md-left">
                            <h2>Перегон авто</h2>
                            <p>Помощь в выборе и покупке авто в странах ЕС. Перегон авто через границу.</p>
                        </div>
                     </div>
-                    <div class="d-md-flex">
+                    <div class="d-md-flex  revealator-zoomin">
                        <div class="col-md-5">  <img src="{{asset('assets/images/footer-fig1.png')}}" alt=""/></div>
                          <div class="col mt-3 mt-md-0 text-center text-md-left">
                             <h2>Помощь по телефону</h2>
@@ -274,6 +274,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="{{asset('assets//slick/slick.min.js')}}"></script>
+<script src="{{asset('/assets/revealator/fm.revealator.jquery.js')}}"></script>
 <script>
 
 $('.popup .fa-close').click(function(){

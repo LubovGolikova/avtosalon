@@ -37,10 +37,6 @@
 
        </table>
        </div>
-        <div class="container-pagination">
-            {{$signups->links()}}
-
-        </div>
     </div>
 
 </div>
