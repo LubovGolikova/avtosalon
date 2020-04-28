@@ -14,7 +14,6 @@
                   </tr>
               </thead>
               <tbody>
-
                     @foreach($signups as $signup)
                     <tr>
                         <div class="container-signup row">
