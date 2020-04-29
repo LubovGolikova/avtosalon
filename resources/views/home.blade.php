@@ -193,7 +193,7 @@
                             <div class="stars row m-0">
                                {{$review->getStarOnReviews($review->rating)}}
                             </div>
-                               <p>{{$review->review}}</p>
+                               <p>{!!$review->shortContent()!!}</p>
                         </div>
                     </div>
                @endforeach

@@ -15,4 +15,10 @@ class Review extends Model
     public function children(){
         return $this->hasOne('\App\Review', 'parent_id');
     }
+    function   shortContent($len=300){
+        $str = $this->review;
+        if(strlen($str)>$len)
+            return mb_substr($str, 0, $len).'...';
+        return $str;
+    }
 }
